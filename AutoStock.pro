@@ -21,6 +21,7 @@ SOURCES += \
     ddecomm.cpp \
     main.cpp \
     mainwindow.cpp \
+    ordersystem.cpp \
     stockbox.cpp
 
 HEADERS += \
@@ -29,6 +30,7 @@ HEADERS += \
     datasystemworker.h \
     ddecomm.h \
     mainwindow.h \
+    ordersystem.h \
     stockbox.h
 
 FORMS += \
