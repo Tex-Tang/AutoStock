@@ -22,7 +22,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     ordersystem.cpp \
-    stockbox.cpp
+    stockbox.cpp \
+    aes.cpp
 
 HEADERS += \
     datastruct.h \
@@ -31,7 +32,8 @@ HEADERS += \
     ddecomm.h \
     mainwindow.h \
     ordersystem.h \
-    stockbox.h
+    stockbox.h \
+    aes.h
 
 FORMS += \
     mainwindow.ui \
