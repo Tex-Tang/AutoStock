@@ -99,7 +99,3 @@ void DataSystem::receiveData(QString code, QString item, QString value){
         data->reset();
     }
 }
-
-void DataSystem::log(QString msg){
-    qDebug() << msg;
-}
