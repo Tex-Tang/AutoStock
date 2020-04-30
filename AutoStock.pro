@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     datasystem.cpp \
+    datasystemworker.cpp \
     ddecomm.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 HEADERS += \
     datastruct.h \
     datasystem.h \
+    datasystemworker.h \
     ddecomm.h \
     mainwindow.h \
     stockbox.h
