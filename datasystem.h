@@ -1,7 +1,6 @@
 #ifndef DATASYSTEM_H
 #define DATASYSTEM_H
 
-
 #include <QMap>
 #include <QHash>
 #include <QString>
