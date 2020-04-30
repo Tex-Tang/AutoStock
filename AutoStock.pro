@@ -43,3 +43,13 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+unix|win32: LIBS += -L$$PWD/'../../../../Program Files/OpenSSL-Win64/lib/' -llibcrypto
+
+INCLUDEPATH += $$PWD/'../../../../Program Files/OpenSSL-Win64/include'
+DEPENDPATH += $$PWD/'../../../../Program Files/OpenSSL-Win64/include'
+
+unix|win32: LIBS += -L$$PWD/'../../../../Program Files/OpenSSL-Win64/lib/' -lopenssl
+
+INCLUDEPATH += $$PWD/'../../../../Program Files/OpenSSL-Win64/include'
+DEPENDPATH += $$PWD/'../../../../Program Files/OpenSSL-Win64/include'
