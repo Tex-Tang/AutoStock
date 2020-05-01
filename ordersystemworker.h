@@ -14,7 +14,7 @@ public slots:
     void init();
 
 signals:
-    void receiveOrder(QString action, int id, QString code, QString name, int qty, double price);
+    void receiveOrder(QString action, int id, QString code, QString name, int qty, double price, int triggerSize);
     void sendOrderResult(OrderResult result);
     void changeRakutenInfo(RakutenInfo info);
     void log(QString msg);

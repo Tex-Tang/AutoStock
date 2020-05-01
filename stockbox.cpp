@@ -134,7 +134,8 @@ void StockBox::test(StockData data){
                        this->stocksData[1]->code,
                        this->stocksData[1]->name,
                        this->stocksData[1]->condition.asksize / 100,
-                       this->stocksData[1]->condition.ask);
+                       this->stocksData[1]->condition.ask,
+                       data.asksize);
         if(this->matching){
             this->startSelling(true);
             this->startMatching(false);
@@ -148,7 +149,8 @@ void StockBox::test(StockData data){
                        this->stocksData[1]->code,
                        this->stocksData[1]->name,
                        this->stocksData[1]->condition.bidsize / 100,
-                       this->stocksData[1]->condition.bid);
+                       this->stocksData[1]->condition.bid,
+                       data.bidsize);
     }
 
     if(this->inverseBuying && sell){
@@ -158,7 +160,8 @@ void StockBox::test(StockData data){
                        this->stocksData[1]->code,
                        this->stocksData[1]->name,
                        this->stocksData[1]->condition.bidsize / 100,
-                       this->stocksData[1]->condition.bid);
+                       this->stocksData[1]->condition.bid,
+                       data.bidsize);
         if(this->inverseMatching){
             this->startSelling(true, true);
             this->startMatching(false, true);
@@ -172,7 +175,8 @@ void StockBox::test(StockData data){
                        this->stocksData[1]->code,
                        this->stocksData[1]->name,
                        this->stocksData[1]->condition.asksize / 100,
-                       this->stocksData[1]->condition.ask);
+                       this->stocksData[1]->condition.ask,
+                       data.asksize);
     }
 }
 

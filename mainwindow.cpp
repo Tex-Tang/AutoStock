@@ -57,10 +57,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->orderTableView->setColumnWidth(5, 50);
     ui->orderTableView->setColumnWidth(6, 70);
     ui->orderTableView->setColumnWidth(7, 70);
-    ui->orderTableView->setColumnWidth(8, 80);
-    ui->orderTableView->setColumnWidth(9, 60);
-    ui->orderTableView->setColumnWidth(10, 5);
-    ui->orderTableView->horizontalHeader()->setSectionResizeMode(11, QHeaderView::Stretch);
+    ui->orderTableView->setColumnWidth(8, 70);
+    ui->orderTableView->setColumnWidth(9, 80);
+    ui->orderTableView->setColumnWidth(10, 60);
+    ui->orderTableView->setColumnWidth(11, 5);
+    ui->orderTableView->setColumnWidth(12, 300);
+    //ui->orderTableView->horizontalHeader()->setSectionResizeMode(11, QHeaderView::Stretch);
 
     connect(ui->addStockBoxButton, SIGNAL(clicked()), this, SLOT(addStockBox()));
     connect(ui->autoArrangeButton, SIGNAL(clicked()), this, SLOT(autoArrange()));

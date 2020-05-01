@@ -32,7 +32,7 @@ signals:
 public slots:
     // StockBox
     void requestDone(QNetworkReply *reply);
-    void receiveOrder(QString action, int id, QString code, QString name, int qty, double price);
+    void receiveOrder(QString action, int id, QString code, QString name, int qty, double price, int triggerSize);
 
     // Mainwindow
     void changeRakutenInfo(RakutenInfo info);

@@ -29,14 +29,16 @@ QVariant OrderTableModel::headerData(int section, Qt::Orientation orientation, i
         case 6:
             return QString("Status");
         case 7:
-            return QString("Code");
+            return QString("Trigger Size");
         case 8:
-            return QString("Name");
+            return QString("Code");
         case 9:
-            return QString("Price");
+            return QString("Name");
         case 10:
-            return QString("Qty");
+            return QString("Price");
         case 11:
+            return QString("Qty");
+        case 12:
             return QString("Message");
         }
     }
@@ -55,7 +57,7 @@ int OrderTableModel::columnCount(const QModelIndex &parent) const
 {
     if (parent.isValid())
         return 0;
-    return 12;
+    return 13;
 }
 
 QVariant OrderTableModel::data(const QModelIndex &index, int role) const
@@ -83,14 +85,16 @@ QVariant OrderTableModel::data(const QModelIndex &index, int role) const
             else if(result.status == 2) return "FAILED";
             return "ERROR";
         case 7:
-            return result.code;
+            return QLocale(QLocale::English).toString(result.triggerSize);
         case 8:
-            return result.name;
+            return result.code;
         case 9:
-            return result.price;
+            return result.name;
         case 10:
-            return result.qty;
+            return result.price;
         case 11:
+            return result.qty;
+        case 12:
             return result.response;
         }
     }

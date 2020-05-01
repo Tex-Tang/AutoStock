@@ -76,6 +76,7 @@ struct OrderResult{
     QString name;
     double price;
     int qty;
+    int triggerSize;
     QString response;
 };
 

@@ -47,7 +47,7 @@ signals:
     void removeStockBox(StockBox* self);
     void subscribe(StockBox* self, QString code);
     void unsubscribe(StockBox* self, QString code);
-    void sendOrder(QString action, int id, QString code, QString name, int qty, double price);
+    void sendOrder(QString action, int id, QString code, QString name, int qty, double price, int triggerSize);
 
 private:
     int id;

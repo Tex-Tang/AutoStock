@@ -22,7 +22,7 @@ OrderSystem::OrderSystem(QObject *parent) : QObject(parent)
     networkRequest.setRawHeader("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8");
 }
 
-void OrderSystem::receiveOrder(QString action, int id, QString code, QString name, int qty, double price){
+void OrderSystem::receiveOrder(QString action, int id, QString code, QString name, int qty, double price, int triggerSize){
     OrderResult result = OrderResult();
     result.id = id;
     result.startTime = QDateTime::currentDateTime();
@@ -31,6 +31,7 @@ void OrderSystem::receiveOrder(QString action, int id, QString code, QString nam
     result.name = name;
     result.price = price;
     result.qty = qty;
+    result.triggerSize = triggerSize;
     if(this->info.valid()){
         QNetworkReply* reply = networkManager->post(networkRequest, requestData(action, name, qty, price));
         reply->setProperty("id", result.id);
@@ -39,6 +40,7 @@ void OrderSystem::receiveOrder(QString action, int id, QString code, QString nam
         reply->setProperty("code", result.code);
         reply->setProperty("action", result.action);
         reply->setProperty("startTime", result.startTime);
+        reply->setProperty("triggerSize", result.triggerSize);
     }else{
         result.status = 0;
         result.endTime = QDateTime::currentDateTime();
@@ -59,6 +61,7 @@ void OrderSystem::requestDone(QNetworkReply *reply)
     result.name = reply->property("name").toString();
     result.price = reply->property("price").toDouble();
     result.qty = reply->property("qty").toInt();
+    result.triggerSize = reply->property("triggerSize").toInt();
     result.status = 0;
     if(reply->error() == QNetworkReply::NoError){
         QJsonObject response_obj = QJsonDocument::fromJson(reply->readAll()).object().value("response").toObject();
