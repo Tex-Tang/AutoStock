@@ -179,6 +179,8 @@ Qt::ItemFlags StockBoxTableModel::flags(const QModelIndex &index) const
 }
 
 void StockBoxTableModel::updateData(int top, int left, int bottom, int right){
-    emit dataChanged(createIndex(top, left), createIndex(bottom, right), QVector<int>() << Qt::DisplayRole);
+    emit dataChanged(createIndex(0, 0), createIndex(1, 5), QVector<int>() << Qt::DisplayRole);
+    // emit dataChanged(createIndex(1, 6), createIndex(1, 6), QVector<int>() << Qt::BackgroundColorRole);
+    // emit dataChanged(createIndex(1, 9), createIndex(1, 9), QVector<int>() << Qt::BackgroundColorRole);
 }
 

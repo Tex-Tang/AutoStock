@@ -11,7 +11,7 @@ struct StockData{
     int asksize, bidsize;
     int askrate, bidrate;
     void reset() { ask = bid = asksize = bidsize = askrate = bidrate = -1; }
-}; Q_DECLARE_METATYPE(StockData);
+};
 
 struct StockCondition{
     double  ask = 0, bid = 0;
@@ -64,6 +64,6 @@ struct OrderResult{
     double price;
     int qty;
     QString response;
-}; Q_DECLARE_METATYPE(OrderResult);
+};
 
 #endif // DATASTRUCT_H

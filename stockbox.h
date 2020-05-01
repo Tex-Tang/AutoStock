@@ -21,26 +21,45 @@ class StockBox : public QWidget
 
 public:
     QVector<StockBoxData*> stocksData;
-    explicit StockBox(QWidget *parent = nullptr);
+    explicit StockBox(int id, QWidget *parent = nullptr);
     ~StockBox();
+    void test(StockData data);
     void closeEvent(QCloseEvent *event);
+    void startBuying(bool start, bool inverse = false);
+    void startSelling(bool start, bool inverse = false);
+    void startMatching(bool start, bool inverse = false);
 
 public slots:
     void changeCode();
     StockBoxData request(QString code);
     void update(QString code, StockData data);
+    void copyAsk();
+    void copyBid();
+    void startBuyingButtonPressed();
+    void startSellingButtonPressed();
+    void startMatchingButtonPressed();
+    void startInverseBuyingButtonPressed();
+    void startInverseSellingButtonPressed();
+    void startInverseMatchingButtonPressed();
 
 signals:
     void removeStockBox(StockBox* self);
     void subscribe(StockBox* self, QString code);
     void unsubscribe(StockBox* self, QString code);
-    void startBuyingSignal(StockBox* self, bool start, bool inverse);
-    void startSellingSignal(StockBox* self, bool start, bool inverse);
+    void sendOrder(QString action, int id, QString code, QString name, int qty, double price);
 
 private:
+    int id;
     DdeComm* ddeComm;
     Ui::StockBox *ui;
     StockBoxTableModel* tableModel;
+
+    bool buying = false;
+    bool selling = false;
+    bool matching = false;
+    bool inverseBuying = false;
+    bool inverseSelling = false;
+    bool inverseMatching = false;
 };
 
 #endif // STOCKBOX_H

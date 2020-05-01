@@ -22,17 +22,17 @@ OrderSystem::OrderSystem(QObject *parent) : QObject(parent)
     networkRequest.setRawHeader("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8");
 }
 
-void OrderSystem::order(QString action, OrderStatus info, int qty, double price){
+void OrderSystem::receiveOrder(QString action, int id, QString code, QString name, int qty, double price){
     OrderResult result = OrderResult();
-    result.id = info.id;
+    result.id = id;
     result.startTime = QDateTime::currentDateTime();
     result.action = action;
-    result.code = info.code;
-    result.name = info.name;
+    result.code = code;
+    result.name = name;
     result.price = price;
     result.qty = qty;
     if(this->info.valid()){
-        QNetworkReply* reply = networkManager->post(networkRequest, requestData("buy", info.name, qty, price));
+        QNetworkReply* reply = networkManager->post(networkRequest, requestData(action, name, qty, price));
         reply->setProperty("id", result.id);
         reply->setProperty("qty", result.qty);
         reply->setProperty("name", result.name);
@@ -47,76 +47,45 @@ void OrderSystem::order(QString action, OrderStatus info, int qty, double price)
     }
 }
 
-void OrderSystem::addStockBox(StockBox* stockBox){
-    stockBoxToOrderStatus[stockBox] = OrderStatus();
-}
-
-void OrderSystem::removeStockBox(StockBox* stockBox){
-    stockBoxToOrderStatus.remove(stockBox);
-}
-
-void OrderSystem::changeTestCode(StockBox* stockBox, QString stockCode, QString shortname){
-    if(!stockBoxToOrderStatus[stockBox].code.isNull()){
-        QString oldCode = stockBoxToOrderStatus[stockBox].code;
-        codeToStockBoxes[oldCode].remove(stockBox);
+void OrderSystem::requestDone(QNetworkReply *reply)
+{
+    OrderResult result = OrderResult();
+    result.id = reply->property("id").toInt();
+    result.startTime = reply->property("startTime").toDateTime();
+    result.endTime = QDateTime::currentDateTime();
+    result.action = reply->property("action").toString();
+    result.code = reply->property("code").toString();
+    result.name = reply->property("name").toString();
+    result.price = reply->property("price").toDouble();
+    result.qty = reply->property("qty").toInt();
+    result.status = 0;
+    if(reply->error() == QNetworkReply::NoError){
+        QJsonObject response_obj = QJsonDocument::fromJson(reply->readAll()).object().value("response").toObject();
+        if(!response_obj.isEmpty()){
+            if(response_obj.contains("infoMsg")){
+                result.status = 2;
+                result.response = response_obj.value("infoMsg").toString();
+            }else if(response_obj.contains("data")){
+                result.status = 1;
+                result.response = response_obj.value("data").toObject().value("orderNo").toString();
+            }else{
+                result.status = 0;
+                result.response = reply->readAll();
+            }
+        }else{
+            result.status = 0;
+            result.response = reply->readAll();
+        }
+    }else{
+        result.status = 0;
+        result.response = reply->errorString();
     }
-    stockBoxToOrderStatus[stockBox].code = stockCode;
-    stockBoxToOrderStatus[stockBox].name = shortname;
-    codeToStockBoxes[stockCode].insert(stockBox);
+    emit sendOrderResult(result);
+    reply->deleteLater();
 }
 
 void OrderSystem::changeRakutenInfo(RakutenInfo info){
     this->info = info;
-}
-
-void OrderSystem::changeBuyingStatus(StockBox* stockBox, bool start, bool inverse){
-    if(!inverse){
-        stockBoxToOrderStatus[stockBox].buying = start;
-    }else{
-        stockBoxToOrderStatus[stockBox].buyingInverse = start;
-    }
-}
-
-void OrderSystem::changeSellingStatus(StockBox* stockBox, bool start, bool inverse){
-    if(!inverse){
-        stockBoxToOrderStatus[stockBox].selling = start;
-    }else{
-        stockBoxToOrderStatus[stockBox].sellingInverse = start;
-    }
-}
-
-void OrderSystem::changeMatchingStatus(StockBox* stockBox, bool start, bool inverse){
-    if(!inverse){
-        stockBoxToOrderStatus[stockBox].matching = start;
-    }else{
-        stockBoxToOrderStatus[stockBox].matchingInverse = start;
-    }
-}
-
-void OrderSystem::receiveData(QString code, StockData data){
-    for(StockBox* stockBox : codeToStockBoxes[code]){
-        OrderStatus* status = &stockBoxToOrderStatus[stockBox];
-        StockCondition* condition = new StockCondition;
-        StockCondition* order = new StockCondition;
-
-        if(status->buying || status->sellingInverse){
-            bool buy = (data.bid > 0 && data.ask > 0 && data.bid != data.ask) &&
-                       (data.ask >= condition->ask && data.askrate <= condition->askrate) &&
-                       (data.ask >= condition->ask && data.asksize <= condition->asksize) &&
-                       (data.ask > condition->ask);
-            if(status->buying && buy){} // Buy
-            if(status->sellingInverse && buy){} // Sell
-        }
-
-        if(status->selling || status->buyingInverse){
-            bool sell = (data.bid > 0 && data.ask > 0 && data.bid != data.ask) &&
-                        (data.bid <= condition->bid && data.bidrate <= condition->bidrate) &&
-                        (data.bid <= condition->bid && data.bidsize <= condition->bidsize) &&
-                        (data.bid < condition->bid);
-            if(status->selling && sell){} // Sell
-            if(status->buyingInverse && sell){} // Buy
-        }
-    }
 }
 
 QByteArray OrderSystem::requestData(QString odrSide, QString mrktsym, int qty, double price){
@@ -170,4 +139,3 @@ QByteArray OrderSystem::requestData(QString odrSide, QString mrktsym, int qty, d
                                          RAKUTEN_PASSPHRASE)));
     return QJsonDocument(request_data).toJson(QJsonDocument::Compact);
 }
-

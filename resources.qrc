@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>sound/buy.mp3</file>
+        <file>sound/sell.mp3</file>
+    </qresource>
+</RCC>

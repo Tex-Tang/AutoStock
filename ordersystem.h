@@ -26,22 +26,15 @@ public:
     void order(QString action, OrderStatus info, int qty, double price);
 
 signals:
-    void sendOrderResult(OrderResult);
+    void sendOrderResult(OrderResult result);
 
 public slots:
     // StockBox
-    void addStockBox(StockBox* stockBox);
-    void removeStockBox(StockBox* stockBox);
-    void changeTestCode(StockBox* stockBox, QString stockCode, QString shortname);
-    void changeBuyingStatus(StockBox* stockBox, bool start, bool inverse);
-    void changeSellingStatus(StockBox* stockBox, bool start, bool inverse);
-    void changeMatchingStatus(StockBox* stockBox, bool start, bool inverse);
+    void requestDone(QNetworkReply *reply);
+    void receiveOrder(QString action, int id, QString code, QString name, int qty, double price);
 
     // Mainwindow
     void changeRakutenInfo(RakutenInfo info);
-
-    // DataSystem
-    void receiveData(QString code, StockData data);
 
 private:
     AES* aes;

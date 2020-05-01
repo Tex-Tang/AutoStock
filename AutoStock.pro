@@ -1,6 +1,6 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets network
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets network multimedia
 
 CONFIG += c++11
 
@@ -22,6 +22,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     ordersystem.cpp \
+    ordersystemworker.cpp \
+    ordertablemodel.cpp \
     stockbox.cpp \
     aes.cpp \
     stockboxtablemodel.cpp \
@@ -34,6 +36,8 @@ HEADERS += \
     ddecomm.h \
     mainwindow.h \
     ordersystem.h \
+    ordersystemworker.h \
+    ordertablemodel.h \
     stockbox.h \
     aes.h \
     stockboxtablemodel.h \
@@ -57,3 +61,6 @@ unix|win32: LIBS += -L$$PWD/'../../../../Program Files/OpenSSL-Win64/lib/' -lope
 
 INCLUDEPATH += $$PWD/'../../../../Program Files/OpenSSL-Win64/include'
 DEPENDPATH += $$PWD/'../../../../Program Files/OpenSSL-Win64/include'
+
+RESOURCES += \
+    resources.qrc

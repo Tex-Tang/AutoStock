@@ -109,7 +109,7 @@
      </layout>
     </item>
     <item>
-     <widget class="QTableView" name="tableView"/>
+     <widget class="QTableView" name="orderTableView"/>
     </item>
    </layout>
   </widget>

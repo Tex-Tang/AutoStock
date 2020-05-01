@@ -3,9 +3,12 @@
 
 #include <QMainWindow>
 #include <QThread>
-#include <QSet>
+#include <QVector>
+#include <QSortFilterProxyModel>
 #include "stockbox.h"
 #include "datasystemworker.h"
+#include "ordersystemworker.h"
+#include "ordertablemodel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,6 +21,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void closeEvent(QCloseEvent *event);
 
 public slots:
     void addStockBox();
@@ -25,11 +29,17 @@ public slots:
 
 signals:
     void initDataSystem();
+    void initOrderSystem();
 
 private:
     Ui::MainWindow *ui;
     QThread* dataThread;
+    QThread* orderThread;
+    int stockBoxID = 1;
+    QVector <StockBox*> stockBoxes;
     DataSystemWorker* dataSystemWorker;
-    QSet <StockBox*> stockBoxes;
+    OrderSystemWorker* orderSystemWorker;
+    OrderTableModel* orderTableModel;
+
 };
 #endif // MAINWINDOW_H
