@@ -2,5 +2,6 @@
     <qresource prefix="/resources">
         <file>sound/buy.mp3</file>
         <file>sound/sell.mp3</file>
+        <file>icon.ico</file>
     </qresource>
 </RCC>

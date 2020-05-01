@@ -29,7 +29,7 @@
    <enum>Qt::NoContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>Stockbox</string>
+   <string>Stock Box</string>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
