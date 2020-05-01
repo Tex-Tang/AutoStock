@@ -31,7 +31,7 @@ void DataSystem::unsubscribe(StockBox* stockBox, QString code){
     }
     if(codeToStockBoxes[code].size() == 0){
         codeToStockBoxes.remove(code);
-        stopAdvise(code);
+        // stopAdvise(code);
     }
 }
 
@@ -52,6 +52,7 @@ bool DataSystem::stopAdvise(QString code){
 }
 
 void DataSystem::receiveData(QString code, QString item, QString value){
+    qDebug() << code << item << value;
     StockData* data = &codeToStockData[code];
     switch(itemsIndex.indexOf(item)){
     case 0:
