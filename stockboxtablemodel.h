@@ -8,10 +8,6 @@
 #include <QAbstractTableModel>
 #include "datastruct.h"
 
-#define RED_COLOR QColor(231, 76, 60)
-#define GREEN_COLOR QColor(46, 213, 115)
-#define WHITE_COLOR QColor(255, 255, 255)
-
 class StockBoxTableModel : public QAbstractTableModel
 {
     Q_OBJECT

@@ -61,7 +61,7 @@
       <item>
        <widget class="QPushButton" name="connectButton">
         <property name="text">
-         <string>Conenct</string>
+         <string>Connect</string>
         </property>
        </widget>
       </item>
@@ -79,28 +79,28 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="startBuyingButton">
+       <widget class="QPushButton" name="startAllBuyingButton">
         <property name="text">
          <string>Start Buying</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="stopBuyingButton">
+       <widget class="QPushButton" name="stopAllBuyingButton">
         <property name="text">
          <string>Stop Buying</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="startSellingButton">
+       <widget class="QPushButton" name="startAllSellingButton">
         <property name="text">
          <string>Start Selling</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="stopSellingButton">
+       <widget class="QPushButton" name="stopAllSellingButton">
         <property name="text">
          <string>Stop Selling</string>
         </property>

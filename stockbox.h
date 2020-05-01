@@ -23,6 +23,7 @@ public:
     QVector<StockBoxData*> stocksData;
     explicit StockBox(int id, QWidget *parent = nullptr);
     ~StockBox();
+    void load(StockBoxJsonObject obj);
     void test(StockData data);
     void closeEvent(QCloseEvent *event);
     void startBuying(bool start, bool inverse = false);

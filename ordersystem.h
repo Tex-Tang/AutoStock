@@ -27,6 +27,7 @@ public:
 
 signals:
     void sendOrderResult(OrderResult result);
+    void log(QString msg);
 
 public slots:
     // StockBox

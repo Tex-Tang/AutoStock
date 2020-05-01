@@ -2,7 +2,7 @@
 #define ORDERSYSTEMWORKER_H
 
 #include <QObject>
-#include <ordersystem.h>
+#include "ordersystem.h"
 
 class OrderSystemWorker : public QObject
 {
@@ -16,6 +16,8 @@ public slots:
 signals:
     void receiveOrder(QString action, int id, QString code, QString name, int qty, double price);
     void sendOrderResult(OrderResult result);
+    void changeRakutenInfo(RakutenInfo info);
+    void log(QString msg);
 
 private:
     OrderSystem* orderSystem;

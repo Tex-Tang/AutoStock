@@ -19,6 +19,8 @@ SOURCES += \
     datasystem.cpp \
     datasystemworker.cpp \
     ddecomm.cpp \
+    logger.cpp \
+    loggerworker.cpp \
     main.cpp \
     mainwindow.cpp \
     ordersystem.cpp \
@@ -34,6 +36,8 @@ HEADERS += \
     datasystem.h \
     datasystemworker.h \
     ddecomm.h \
+    logger.h \
+    loggerworker.h \
     mainwindow.h \
     ordersystem.h \
     ordersystemworker.h \

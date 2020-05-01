@@ -10,6 +10,8 @@ StockBox::StockBox(int id, QWidget *parent) :
     ddeComm = new DdeComm;
     stocksData.append(new StockBoxData);
     stocksData.append(new StockBoxData);
+    stocksData[0]->data.reset();
+    stocksData[1]->data.reset();
     tableModel = new StockBoxTableModel(stocksData, this);
     ui->stockBoxDataTableView->setModel(tableModel);
     ui->stockBoxDataTableView->setItemDelegate(new StockBoxTableSpinBoxDelegate);
@@ -35,6 +37,14 @@ StockBox::StockBox(int id, QWidget *parent) :
     this->startBuying(false, true);
     this->startSelling(false, true);
     this->startMatching(false, true);
+}
+
+void StockBox::load(StockBoxJsonObject obj){
+    this->move(obj.x, obj.y);
+    ui->stockCodeLineEdit->setText(obj.stocks[0].code);
+    this->stocksData[0]->condition = obj.stocks[0].condition;
+    ui->warrantCodeLineEdit->setText(obj.stocks[1].code);
+    this->stocksData[1]->condition = obj.stocks[1].condition;
 }
 
 void StockBox::changeCode(){
@@ -70,6 +80,7 @@ void StockBox::changeCode(){
         }
     }
     this->tableModel->updateData();
+    this->setWindowTitle(QString::number(id) + " " + this->stocksData[0]->code + " " + this->stocksData[0]->name + " " + this->stocksData[1]->code + " " + this->stocksData[1]->name);
 }
 
 StockBoxData StockBox::request(QString code){
@@ -81,12 +92,12 @@ StockBoxData StockBox::request(QString code){
         result.code = code;
         result.data.ask = ddeComm->request(DDE_APP, topic, code + ";ask").toDouble();
         result.data.bid = ddeComm->request(DDE_APP, topic, code + ";bid").toDouble();
-        result.data.asksize = ddeComm->request(DDE_APP, topic, code + ";asksize").toInt();
-        result.data.bidsize = ddeComm->request(DDE_APP, topic, code + ";bidsize").toInt();
+        result.data.asksize = ddeComm->request(DDE_APP, topic, code + ";asksize").toDouble();
+        result.data.bidsize = ddeComm->request(DDE_APP, topic, code + ";bidsize").toDouble();
         double total_size = result.data.bidsize +  result.data.asksize;
         if(total_size > 0){
-             result.data.askrate =  result.data.asksize / total_size;
-             result.data.bidrate =  result.data.bidsize / total_size;
+             result.data.askrate =  qRound((result.data.asksize / total_size)*100);
+             result.data.bidrate =  qRound((result.data.bidsize / total_size)*100);
         }else{
              result.data.askrate =  result.data.bidrate = 100;
         }
@@ -97,6 +108,7 @@ StockBoxData StockBox::request(QString code){
 void StockBox::update(QString code, StockData data){
     if(stocksData[0]->code == code){
         stocksData[0]->data = data;
+        this->test(data);
     }
     if(stocksData[1]->code == code){
         stocksData[1]->data = data;

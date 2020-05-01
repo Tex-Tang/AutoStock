@@ -52,7 +52,7 @@ bool DataSystem::stopAdvise(QString code){
 }
 
 void DataSystem::receiveData(QString code, QString item, QString value){
-    qDebug() << code << item << value;
+
     StockData* data = &codeToStockData[code];
     switch(itemsIndex.indexOf(item)){
     case 0:
@@ -88,15 +88,16 @@ void DataSystem::receiveData(QString code, QString item, QString value){
     if(updated){
         double total_size = data->bidsize + data->asksize;
         if(total_size > 0){
-            data->askrate = data->asksize / total_size;
-            data->bidrate = data->bidsize / total_size;
+            data->askrate = qRound((data->asksize / total_size)*100);
+            data->bidrate = qRound((data->bidsize / total_size)*100);
         }else{
             data->askrate = data->bidrate = 100;
         }
-        emit update(code, codeToStockData[code]);
+        //emit update(code, codeToStockData[code]);
         for(StockBox* stockBox : codeToStockBoxes[code].keys()){
             QMetaObject::invokeMethod(stockBox, "update", Q_ARG(QString, code), Q_ARG(StockData, codeToStockData[code]));
         }
         data->reset();
     }
+    emit log(QDateTime::currentDateTime().toString("hh:mm:ss.zzz") + " " + code + " " + item + "->" + value);
 }

@@ -3,6 +3,7 @@
 StockBoxTableSpinBoxDelegate::StockBoxTableSpinBoxDelegate(QObject *parent)
     : QItemDelegate(parent)
 {
+
 }
 
 QWidget *StockBoxTableSpinBoxDelegate::createEditor(

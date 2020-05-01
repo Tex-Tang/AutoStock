@@ -45,6 +45,7 @@ void OrderSystem::receiveOrder(QString action, int id, QString code, QString nam
         result.response = "Please Filled in rakuten info";
         emit sendOrderResult(result);
     }
+    emit log(QDateTime::currentDateTime().toString("hh:mm:ss.zzz") + " START " + action + " " + QString::number(id) + " " + code);
 }
 
 void OrderSystem::requestDone(QNetworkReply *reply)
@@ -81,6 +82,7 @@ void OrderSystem::requestDone(QNetworkReply *reply)
         result.response = reply->errorString();
     }
     emit sendOrderResult(result);
+    emit log(QDateTime::currentDateTime().toString("hh:mm:ss.zzz") + " DONE " + result.action + " " + QString::number(result.id) + " " + result.code);
     reply->deleteLater();
 }
 

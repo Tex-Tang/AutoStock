@@ -1,10 +1,23 @@
 #ifndef DATASTRUCT_H
 #define DATASTRUCT_H
 #include <QString>
+#include <QVector>
 #include <QMetaType>
 #include <QDateTime>
 
 #define DDE_APP "SIDE"
+
+#define RAKUTEN_CONFIGURATION_COMMAND "window.prompt('Copy to clipboard: Ctrl+C, Enter', JSON.stringify({" \
+                                      "session: session," \
+                                      "appID: get_appID()," \
+                                      "cookie: document.cookie, " \
+                                      "accNo: '30035598'," \
+                                      "tpin: '132339'" \
+                                      "}));"
+
+#define RED_COLOR QColor(231, 76, 60)
+#define GREEN_COLOR QColor(46, 213, 115)
+#define WHITE_COLOR QColor(255, 255, 255)
 
 struct StockData{
     double  ask, bid;
@@ -64,6 +77,12 @@ struct OrderResult{
     double price;
     int qty;
     QString response;
+};
+
+struct StockBoxJsonObject{
+    int x;
+    int y;
+    QVector<StockBoxData> stocks;
 };
 
 #endif // DATASTRUCT_H

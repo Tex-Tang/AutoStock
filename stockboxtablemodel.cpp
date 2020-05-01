@@ -49,7 +49,6 @@ bool StockBoxTableModel::setHeaderData(int section, Qt::Orientation orientation,
     return false;
 }
 
-
 int StockBoxTableModel::rowCount(const QModelIndex &parent) const
 {
     return stocks.size();
@@ -183,4 +182,3 @@ void StockBoxTableModel::updateData(int top, int left, int bottom, int right){
     // emit dataChanged(createIndex(1, 6), createIndex(1, 6), QVector<int>() << Qt::BackgroundColorRole);
     // emit dataChanged(createIndex(1, 9), createIndex(1, 9), QVector<int>() << Qt::BackgroundColorRole);
 }
-

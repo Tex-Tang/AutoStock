@@ -1,7 +1,7 @@
 #include "ddecomm.h"
 #include <QtDebug>
 
-#define Log(X)  qDebug() << (QString("%1: %2").arg(__FUNCTION__).arg((X)))
+#define Log(X)  this->log(QString("%1: %2").arg(__FUNCTION__).arg((X)))
 
 DWORD dataSystemIdInst;
 DdeComm* dataSystemDdeComm;
@@ -29,8 +29,8 @@ HDDEDATA CALLBACK DdeCallBack(
             .arg((ULONG64)hdata, 0, 16)
             .arg((ulong)dwData1, 0, 16)
             .arg((ulong)dwData2, 0, 16);
-    //comm->log(msg);
-    Log(msg);
+    //dataSystemDdeComm->log(msg);
+    //Log(msg);
 
     if(idInst && uType == XTYP_ADVDATA && uFmt == CF_TEXT)
     {
@@ -65,7 +65,6 @@ HDDEDATA CALLBACK DdeCallBack(
     return ret;
 }
 
-
 DdeComm::DdeComm(QObject *parent)
     : QObject(parent),
       mSync(QMutex::Recursive), mDdeInstance(0)
@@ -95,7 +94,6 @@ DdeComm::DdeComm(QObject *parent)
 
     if (result == DMLERR_NO_ERROR) {
         mDdeInstance = inst;
-        qDebug() << inst;
         Log(tr("DDE initialization succeeded: instance=%1h").arg((ulong)inst, 0, 16));
     }
     else {

@@ -17,6 +17,7 @@ public:
     explicit DataSystem(QObject *parent = nullptr);
     bool startAdvise(QString code);
     bool stopAdvise(QString code);
+
 public slots:
     // Slots for StockBox
     void subscribe(StockBox* stockBox, QString code);
@@ -28,6 +29,7 @@ public slots:
 signals:
     void log(QString msg);
     void update(QString code, StockData data);
+
 private:
     DdeComm* dde;
     unsigned long long conversationMY;
