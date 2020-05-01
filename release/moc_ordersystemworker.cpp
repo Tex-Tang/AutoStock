@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_OrderSystemWorker_t {
-    QByteArrayData data[18];
-    char stringdata0[145];
+    QByteArrayData data[19];
+    char stringdata0[157];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,21 +41,23 @@ QT_MOC_LITERAL(5, 42, 4), // "code"
 QT_MOC_LITERAL(6, 47, 4), // "name"
 QT_MOC_LITERAL(7, 52, 3), // "qty"
 QT_MOC_LITERAL(8, 56, 5), // "price"
-QT_MOC_LITERAL(9, 62, 15), // "sendOrderResult"
-QT_MOC_LITERAL(10, 78, 11), // "OrderResult"
-QT_MOC_LITERAL(11, 90, 6), // "result"
-QT_MOC_LITERAL(12, 97, 17), // "changeRakutenInfo"
-QT_MOC_LITERAL(13, 115, 11), // "RakutenInfo"
-QT_MOC_LITERAL(14, 127, 4), // "info"
-QT_MOC_LITERAL(15, 132, 3), // "log"
-QT_MOC_LITERAL(16, 136, 3), // "msg"
-QT_MOC_LITERAL(17, 140, 4) // "init"
+QT_MOC_LITERAL(9, 62, 11), // "triggerSize"
+QT_MOC_LITERAL(10, 74, 15), // "sendOrderResult"
+QT_MOC_LITERAL(11, 90, 11), // "OrderResult"
+QT_MOC_LITERAL(12, 102, 6), // "result"
+QT_MOC_LITERAL(13, 109, 17), // "changeRakutenInfo"
+QT_MOC_LITERAL(14, 127, 11), // "RakutenInfo"
+QT_MOC_LITERAL(15, 139, 4), // "info"
+QT_MOC_LITERAL(16, 144, 3), // "log"
+QT_MOC_LITERAL(17, 148, 3), // "msg"
+QT_MOC_LITERAL(18, 152, 4) // "init"
 
     },
     "OrderSystemWorker\0receiveOrder\0\0action\0"
-    "id\0code\0name\0qty\0price\0sendOrderResult\0"
-    "OrderResult\0result\0changeRakutenInfo\0"
-    "RakutenInfo\0info\0log\0msg\0init"
+    "id\0code\0name\0qty\0price\0triggerSize\0"
+    "sendOrderResult\0OrderResult\0result\0"
+    "changeRakutenInfo\0RakutenInfo\0info\0"
+    "log\0msg\0init"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,19 +75,19 @@ static const uint qt_meta_data_OrderSystemWorker[] = {
        4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    6,   39,    2, 0x06 /* Public */,
-       9,    1,   52,    2, 0x06 /* Public */,
-      12,    1,   55,    2, 0x06 /* Public */,
-      15,    1,   58,    2, 0x06 /* Public */,
+       1,    7,   39,    2, 0x06 /* Public */,
+      10,    1,   54,    2, 0x06 /* Public */,
+      13,    1,   57,    2, 0x06 /* Public */,
+      16,    1,   60,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      17,    0,   61,    2, 0x0a /* Public */,
+      18,    0,   63,    2, 0x0a /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Double,    3,    4,    5,    6,    7,    8,
-    QMetaType::Void, 0x80000000 | 10,   11,
-    QMetaType::Void, 0x80000000 | 13,   14,
-    QMetaType::Void, QMetaType::QString,   16,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Double, QMetaType::Int,    3,    4,    5,    6,    7,    8,    9,
+    QMetaType::Void, 0x80000000 | 11,   12,
+    QMetaType::Void, 0x80000000 | 14,   15,
+    QMetaType::Void, QMetaType::QString,   17,
 
  // slots: parameters
     QMetaType::Void,
@@ -99,7 +101,7 @@ void OrderSystemWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         auto *_t = static_cast<OrderSystemWorker *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->receiveOrder((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QString(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< double(*)>(_a[6]))); break;
+        case 0: _t->receiveOrder((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QString(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< double(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7]))); break;
         case 1: _t->sendOrderResult((*reinterpret_cast< OrderResult(*)>(_a[1]))); break;
         case 2: _t->changeRakutenInfo((*reinterpret_cast< RakutenInfo(*)>(_a[1]))); break;
         case 3: _t->log((*reinterpret_cast< QString(*)>(_a[1]))); break;
@@ -109,7 +111,7 @@ void OrderSystemWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (OrderSystemWorker::*)(QString , int , QString , QString , int , double );
+            using _t = void (OrderSystemWorker::*)(QString , int , QString , QString , int , double , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&OrderSystemWorker::receiveOrder)) {
                 *result = 0;
                 return;
@@ -180,9 +182,9 @@ int OrderSystemWorker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void OrderSystemWorker::receiveOrder(QString _t1, int _t2, QString _t3, QString _t4, int _t5, double _t6)
+void OrderSystemWorker::receiveOrder(QString _t1, int _t2, QString _t3, QString _t4, int _t5, double _t6, int _t7)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t7))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 

@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_StockBox_t {
-    QByteArrayData data[28];
-    char stringdata0[349];
+    QByteArrayData data[29];
+    char stringdata0[361];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -46,28 +46,29 @@ QT_MOC_LITERAL(10, 84, 2), // "id"
 QT_MOC_LITERAL(11, 87, 4), // "name"
 QT_MOC_LITERAL(12, 92, 3), // "qty"
 QT_MOC_LITERAL(13, 96, 5), // "price"
-QT_MOC_LITERAL(14, 102, 10), // "changeCode"
-QT_MOC_LITERAL(15, 113, 7), // "request"
-QT_MOC_LITERAL(16, 121, 12), // "StockBoxData"
-QT_MOC_LITERAL(17, 134, 6), // "update"
-QT_MOC_LITERAL(18, 141, 9), // "StockData"
-QT_MOC_LITERAL(19, 151, 4), // "data"
-QT_MOC_LITERAL(20, 156, 7), // "copyAsk"
-QT_MOC_LITERAL(21, 164, 7), // "copyBid"
-QT_MOC_LITERAL(22, 172, 24), // "startBuyingButtonPressed"
-QT_MOC_LITERAL(23, 197, 25), // "startSellingButtonPressed"
-QT_MOC_LITERAL(24, 223, 26), // "startMatchingButtonPressed"
-QT_MOC_LITERAL(25, 250, 31), // "startInverseBuyingButtonPressed"
-QT_MOC_LITERAL(26, 282, 32), // "startInverseSellingButtonPressed"
-QT_MOC_LITERAL(27, 315, 33) // "startInverseMatchingButtonPre..."
+QT_MOC_LITERAL(14, 102, 11), // "triggerSize"
+QT_MOC_LITERAL(15, 114, 10), // "changeCode"
+QT_MOC_LITERAL(16, 125, 7), // "request"
+QT_MOC_LITERAL(17, 133, 12), // "StockBoxData"
+QT_MOC_LITERAL(18, 146, 6), // "update"
+QT_MOC_LITERAL(19, 153, 9), // "StockData"
+QT_MOC_LITERAL(20, 163, 4), // "data"
+QT_MOC_LITERAL(21, 168, 7), // "copyAsk"
+QT_MOC_LITERAL(22, 176, 7), // "copyBid"
+QT_MOC_LITERAL(23, 184, 24), // "startBuyingButtonPressed"
+QT_MOC_LITERAL(24, 209, 25), // "startSellingButtonPressed"
+QT_MOC_LITERAL(25, 235, 26), // "startMatchingButtonPressed"
+QT_MOC_LITERAL(26, 262, 31), // "startInverseBuyingButtonPressed"
+QT_MOC_LITERAL(27, 294, 32), // "startInverseSellingButtonPressed"
+QT_MOC_LITERAL(28, 327, 33) // "startInverseMatchingButtonPre..."
 
     },
     "StockBox\0removeStockBox\0\0StockBox*\0"
     "self\0subscribe\0code\0unsubscribe\0"
     "sendOrder\0action\0id\0name\0qty\0price\0"
-    "changeCode\0request\0StockBoxData\0update\0"
-    "StockData\0data\0copyAsk\0copyBid\0"
-    "startBuyingButtonPressed\0"
+    "triggerSize\0changeCode\0request\0"
+    "StockBoxData\0update\0StockData\0data\0"
+    "copyAsk\0copyBid\0startBuyingButtonPressed\0"
     "startSellingButtonPressed\0"
     "startMatchingButtonPressed\0"
     "startInverseBuyingButtonPressed\0"
@@ -93,31 +94,31 @@ static const uint qt_meta_data_StockBox[] = {
        1,    1,   89,    2, 0x06 /* Public */,
        5,    2,   92,    2, 0x06 /* Public */,
        7,    2,   97,    2, 0x06 /* Public */,
-       8,    6,  102,    2, 0x06 /* Public */,
+       8,    7,  102,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      14,    0,  115,    2, 0x0a /* Public */,
-      15,    1,  116,    2, 0x0a /* Public */,
-      17,    2,  119,    2, 0x0a /* Public */,
-      20,    0,  124,    2, 0x0a /* Public */,
-      21,    0,  125,    2, 0x0a /* Public */,
-      22,    0,  126,    2, 0x0a /* Public */,
-      23,    0,  127,    2, 0x0a /* Public */,
-      24,    0,  128,    2, 0x0a /* Public */,
-      25,    0,  129,    2, 0x0a /* Public */,
-      26,    0,  130,    2, 0x0a /* Public */,
-      27,    0,  131,    2, 0x0a /* Public */,
+      15,    0,  117,    2, 0x0a /* Public */,
+      16,    1,  118,    2, 0x0a /* Public */,
+      18,    2,  121,    2, 0x0a /* Public */,
+      21,    0,  126,    2, 0x0a /* Public */,
+      22,    0,  127,    2, 0x0a /* Public */,
+      23,    0,  128,    2, 0x0a /* Public */,
+      24,    0,  129,    2, 0x0a /* Public */,
+      25,    0,  130,    2, 0x0a /* Public */,
+      26,    0,  131,    2, 0x0a /* Public */,
+      27,    0,  132,    2, 0x0a /* Public */,
+      28,    0,  133,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void, 0x80000000 | 3, QMetaType::QString,    4,    6,
     QMetaType::Void, 0x80000000 | 3, QMetaType::QString,    4,    6,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Double,    9,   10,    6,   11,   12,   13,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Double, QMetaType::Int,    9,   10,    6,   11,   12,   13,   14,
 
  // slots: parameters
     QMetaType::Void,
-    0x80000000 | 16, QMetaType::QString,    6,
-    QMetaType::Void, QMetaType::QString, 0x80000000 | 18,    6,   19,
+    0x80000000 | 17, QMetaType::QString,    6,
+    QMetaType::Void, QMetaType::QString, 0x80000000 | 19,    6,   20,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -139,7 +140,7 @@ void StockBox::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 0: _t->removeStockBox((*reinterpret_cast< StockBox*(*)>(_a[1]))); break;
         case 1: _t->subscribe((*reinterpret_cast< StockBox*(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
         case 2: _t->unsubscribe((*reinterpret_cast< StockBox*(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
-        case 3: _t->sendOrder((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QString(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< double(*)>(_a[6]))); break;
+        case 3: _t->sendOrder((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QString(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< double(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7]))); break;
         case 4: _t->changeCode(); break;
         case 5: { StockBoxData _r = _t->request((*reinterpret_cast< QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< StockBoxData*>(_a[0]) = std::move(_r); }  break;
@@ -203,7 +204,7 @@ void StockBox::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
             }
         }
         {
-            using _t = void (StockBox::*)(QString , int , QString , QString , int , double );
+            using _t = void (StockBox::*)(QString , int , QString , QString , int , double , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&StockBox::sendOrder)) {
                 *result = 3;
                 return;
@@ -274,9 +275,9 @@ void StockBox::unsubscribe(StockBox * _t1, QString _t2)
 }
 
 // SIGNAL 3
-void StockBox::sendOrder(QString _t1, int _t2, QString _t3, QString _t4, int _t5, double _t6)
+void StockBox::sendOrder(QString _t1, int _t2, QString _t3, QString _t4, int _t5, double _t6, int _t7)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t7))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 QT_WARNING_POP

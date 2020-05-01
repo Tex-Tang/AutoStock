@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_OrderSystem_t {
-    QByteArrayData data[20];
-    char stringdata0[167];
+    QByteArrayData data[21];
+    char stringdata0[179];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -49,15 +49,16 @@ QT_MOC_LITERAL(13, 112, 4), // "code"
 QT_MOC_LITERAL(14, 117, 4), // "name"
 QT_MOC_LITERAL(15, 122, 3), // "qty"
 QT_MOC_LITERAL(16, 126, 5), // "price"
-QT_MOC_LITERAL(17, 132, 17), // "changeRakutenInfo"
-QT_MOC_LITERAL(18, 150, 11), // "RakutenInfo"
-QT_MOC_LITERAL(19, 162, 4) // "info"
+QT_MOC_LITERAL(17, 132, 11), // "triggerSize"
+QT_MOC_LITERAL(18, 144, 17), // "changeRakutenInfo"
+QT_MOC_LITERAL(19, 162, 11), // "RakutenInfo"
+QT_MOC_LITERAL(20, 174, 4) // "info"
 
     },
     "OrderSystem\0sendOrderResult\0\0OrderResult\0"
     "result\0log\0msg\0requestDone\0QNetworkReply*\0"
     "reply\0receiveOrder\0action\0id\0code\0"
-    "name\0qty\0price\0changeRakutenInfo\0"
+    "name\0qty\0price\0triggerSize\0changeRakutenInfo\0"
     "RakutenInfo\0info"
 };
 #undef QT_MOC_LITERAL
@@ -81,8 +82,8 @@ static const uint qt_meta_data_OrderSystem[] = {
 
  // slots: name, argc, parameters, tag, flags
        7,    1,   45,    2, 0x0a /* Public */,
-      10,    6,   48,    2, 0x0a /* Public */,
-      17,    1,   61,    2, 0x0a /* Public */,
+      10,    7,   48,    2, 0x0a /* Public */,
+      18,    1,   63,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -90,8 +91,8 @@ static const uint qt_meta_data_OrderSystem[] = {
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 8,    9,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Double,   11,   12,   13,   14,   15,   16,
-    QMetaType::Void, 0x80000000 | 18,   19,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Double, QMetaType::Int,   11,   12,   13,   14,   15,   16,   17,
+    QMetaType::Void, 0x80000000 | 19,   20,
 
        0        // eod
 };
@@ -105,7 +106,7 @@ void OrderSystem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->sendOrderResult((*reinterpret_cast< OrderResult(*)>(_a[1]))); break;
         case 1: _t->log((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 2: _t->requestDone((*reinterpret_cast< QNetworkReply*(*)>(_a[1]))); break;
-        case 3: _t->receiveOrder((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QString(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< double(*)>(_a[6]))); break;
+        case 3: _t->receiveOrder((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QString(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4])),(*reinterpret_cast< int(*)>(_a[5])),(*reinterpret_cast< double(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7]))); break;
         case 4: _t->changeRakutenInfo((*reinterpret_cast< RakutenInfo(*)>(_a[1]))); break;
         default: ;
         }
