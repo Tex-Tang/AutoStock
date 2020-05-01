@@ -5,6 +5,7 @@
 #include <QVector>
 #include <QString>
 #include <QMessageBox>
+#include <QCloseEvent>
 #include "ddecomm.h"
 #include "datastruct.h"
 #include "stockboxtablemodel.h"
@@ -22,6 +23,7 @@ public:
     QVector<StockBoxData*> stocksData;
     explicit StockBox(QWidget *parent = nullptr);
     ~StockBox();
+    void closeEvent(QCloseEvent *event);
 
 public slots:
     void changeCode();
@@ -29,6 +31,7 @@ public slots:
     void update(QString code, StockData data);
 
 signals:
+    void removeStockBox(StockBox* self);
     void subscribe(StockBox* self, QString code);
     void unsubscribe(StockBox* self, QString code);
     void startBuyingSignal(StockBox* self, bool start, bool inverse);

@@ -1,6 +1,6 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets network
 
 CONFIG += c++11
 
@@ -23,7 +23,9 @@ SOURCES += \
     mainwindow.cpp \
     ordersystem.cpp \
     stockbox.cpp \
-    aes.cpp
+    aes.cpp \
+    stockboxtablemodel.cpp \
+    stockboxtablespinboxdelegate.cpp
 
 HEADERS += \
     datastruct.h \
@@ -33,7 +35,9 @@ HEADERS += \
     mainwindow.h \
     ordersystem.h \
     stockbox.h \
-    aes.h
+    aes.h \
+    stockboxtablemodel.h \
+    stockboxtablespinboxdelegate.h
 
 FORMS += \
     mainwindow.ui \

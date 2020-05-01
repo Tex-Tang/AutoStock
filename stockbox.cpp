@@ -5,6 +5,7 @@ StockBox::StockBox(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::StockBox)
 {
+    ui->setupUi(this);
     ddeComm = new DdeComm;
     stocksData.append(new StockBoxData);
     stocksData.append(new StockBoxData);
@@ -19,7 +20,6 @@ StockBox::StockBox(QWidget *parent) :
 
     connect(ui->stockCodeLineEdit, SIGNAL(returnPressed()), this, SLOT(changeCode()));
     connect(ui->warrantCodeLineEdit, SIGNAL(returnPressed()), this, SLOT(changeCode()));
-    ui->setupUi(this);
 }
 
 void StockBox::changeCode(){
@@ -27,7 +27,7 @@ void StockBox::changeCode(){
         QString new_code = ui->stockCodeLineEdit->text();
         StockBoxData result = request(new_code);
         if(!result.name.isEmpty()){
-            emit unsubscribe(this, stocksData[0]->code);
+            if(!stocksData[0]->code.isNull()) emit unsubscribe(this, stocksData[0]->code);
             stocksData[0]->code = result.code;
             stocksData[0]->name = result.name;
             stocksData[0]->data = result.data;
@@ -43,7 +43,7 @@ void StockBox::changeCode(){
         QString new_code = ui->warrantCodeLineEdit->text();
         StockBoxData result = request(new_code);
         if(!result.name.isEmpty()){
-            emit unsubscribe(this, stocksData[1]->code);
+            if(!stocksData[1]->code.isNull()) emit unsubscribe(this, stocksData[1]->code);
             stocksData[1]->code = result.code;
             stocksData[1]->name = result.name;
             stocksData[1]->data = result.data;
@@ -54,6 +54,7 @@ void StockBox::changeCode(){
             ui->warrantCodeLineEdit->setText(stocksData[1]->code);
         }
     }
+    this->tableModel->updateData(0,0,1,9);
 }
 
 StockBoxData StockBox::request(QString code){
@@ -86,6 +87,13 @@ void StockBox::update(QString code, StockData data){
         stocksData[1]->data = data;
     }
     this->tableModel->updateData(0,0,1,9);
+}
+
+void StockBox::closeEvent(QCloseEvent *event){
+    if(!stocksData[0]->code.isNull()) emit unsubscribe(this, stocksData[0]->code);
+    if(!stocksData[1]->code.isNull()) emit unsubscribe(this, stocksData[1]->code);
+    emit removeStockBox(this);
+    event->accept();
 }
 
 StockBox::~StockBox()

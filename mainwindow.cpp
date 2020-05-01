@@ -1,22 +1,43 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "ddecomm.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    DdeComm* dde2 = new DdeComm;
-    DdeComm* dde1 = new DdeComm;
-    unsigned long long conv1 = dde1->open("SIDE","MY");
-    unsigned long long conv2 = dde2->open("SIDE","MY");
-    dde1->advise(conv1,"Hello");
-    dde2->advise(conv2,"Hello2");
+    // Data Thread
+    dataThread = new QThread();
+    dataSystemWorker = new DataSystemWorker();
+    connect(this, SIGNAL(initDataSystem()), dataSystemWorker, SLOT(init()));
+    dataSystemWorker->moveToThread(dataThread);
+    dataThread->start();
+    emit initDataSystem();
+
+    connect(ui->addStockBoxButton, SIGNAL(pressed()), this, SLOT(addStockBox()));
+}
+
+void MainWindow::addStockBox(){
+    StockBox* stockBox = new StockBox;
+    connect(stockBox, &StockBox::removeStockBox, this, &MainWindow::removeStockBox);
+    connect(stockBox, &StockBox::subscribe, dataSystemWorker, &DataSystemWorker::subscribe);
+    connect(stockBox, &StockBox::unsubscribe, dataSystemWorker, &DataSystemWorker::unsubscribe);
+    connect(dataSystemWorker, &DataSystemWorker::update, stockBox, &StockBox::update);
+    stockBoxes.insert(stockBox);
+    stockBox->show();
+}
+
+void MainWindow::removeStockBox(StockBox* stockBox){
+    stockBoxes.erase(stockBoxes.find(stockBox));
 }
 
 MainWindow::~MainWindow()
 {
+    dataThread->wait();
+    dataThread->exit();
     delete ui;
 }
+
+
 
