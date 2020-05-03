@@ -38,6 +38,7 @@ void OrderSystem::receiveOrder(QString action, int id, QString code, QString nam
         reply->setProperty("qty", result.qty);
         reply->setProperty("name", result.name);
         reply->setProperty("code", result.code);
+        reply->setProperty("price", result.price);
         reply->setProperty("action", result.action);
         reply->setProperty("startTime", result.startTime);
         reply->setProperty("triggerSize", result.triggerSize);
