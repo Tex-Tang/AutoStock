@@ -36,7 +36,7 @@ private:
     unsigned long long conversationMD;
     QHash<QString, StockData> codeToStockData;
     QHash<QString, QMap<StockBox*,unsigned int>> codeToStockBoxes;
-    QStringList itemsIndex = { "ask", "bid", "asksize", "bidsize" };
+    QStringList itemsIndex = { "bid", "ask", "bidsize", "asksize" };
 };
 
 #endif // DATASYSTEM_H

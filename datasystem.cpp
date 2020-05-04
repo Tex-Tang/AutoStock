@@ -56,34 +56,35 @@ void DataSystem::receiveData(QString code, QString item, QString value){
     StockData* data = &codeToStockData[code];
     switch(itemsIndex.indexOf(item)){
     case 0:
-        if(data->ask < 0 && data->bid < 0 && data->asksize < 0 && data->bidsize < 0){
-            data->ask = value.toDouble();
-        }else{
-            data->reset();
-        }
-        break;
-    case 1:
-        if(data->ask > 0 && data->bid < 0 && data->asksize < 0 && data->bidsize < 0){
+        if(data->bid < 0 && data->ask < 0 && data->bidsize < 0 && data->asksize < 0){
             data->bid = value.toDouble();
         }else{
             data->reset();
         }
         break;
-    case 2:
-        if(data->ask > 0 && data->bid > 0 && data->asksize < 0 && data->bidsize < 0){
-            data->asksize = value.toDouble();
+    case 1:
+        if(data->bid > 0 && data->ask < 0 && data->bidsize < 0 && data->asksize < 0){
+            data->ask = value.toDouble();
         }else{
             data->reset();
         }
         break;
-    case 3:
-        if(data->ask > 0 && data->bid > 0 && data->asksize > 0 && data->bidsize < 0){
+    case 2:
+        if(data->bid > 0 && data->ask > 0 && data->bidsize < 0 && data->asksize < 0){
             data->bidsize = value.toDouble();
         }else{
             data->reset();
         }
         break;
+    case 3:
+        if(data->bid > 0 && data->ask > 0 && data->bidsize > 0 && data->asksize < 0){
+            data->asksize = value.toDouble();
+        }else{
+            data->reset();
+        }
+        break;
     }
+
     bool updated = data->ask > 0 && data->bid > 0 && data->asksize > 0 && data->bidsize > 0;
     if(updated){
         double total_size = data->bidsize + data->asksize;
