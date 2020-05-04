@@ -29,7 +29,7 @@ QWidget *StockBoxTableSpinBoxDelegate::createEditor(
     if(index.column() == 7 || index.column() == 10){
         QSpinBox *editor = new QSpinBox(parent);
         editor->setFrame(false);
-        editor->setRange(0, 100);
+        editor->setRange(0, 2000000000);
         editor->setSingleStep(1);
         return editor;
     }

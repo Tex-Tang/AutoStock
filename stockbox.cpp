@@ -53,7 +53,7 @@ void StockBox::changeCode(){
         StockBoxData result = request(new_code);
         if(!result.name.isEmpty()){
             if(!stocksData[0]->code.isNull()) emit unsubscribe(this, stocksData[0]->code);
-            stocksData[0]->code = result.code;
+            stocksData[0]->code = new_code; // result.code has replaced "MD"
             stocksData[0]->name = result.name;
             stocksData[0]->data = result.data;
             emit subscribe(this, new_code);
@@ -69,7 +69,7 @@ void StockBox::changeCode(){
         StockBoxData result = request(new_code);
         if(!result.name.isEmpty()){
             if(!stocksData[1]->code.isNull()) emit unsubscribe(this, stocksData[1]->code);
-            stocksData[1]->code = result.code;
+            stocksData[1]->code = new_code; // result.code has replaced "MD"
             stocksData[1]->name = result.name;
             stocksData[1]->data = result.data;
             emit subscribe(this, new_code);
