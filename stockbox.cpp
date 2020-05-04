@@ -106,11 +106,11 @@ StockBoxData StockBox::request(QString code){
 }
 
 void StockBox::update(QString code, StockData data){
-    if(stocksData[0]->code == code){
+    if(stocksData[0]->code.replace(".MD","") == code){
         stocksData[0]->data = data;
         this->test(data);
     }
-    if(stocksData[1]->code == code){
+    if(stocksData[1]->code.replace(".MD","") == code){
         stocksData[1]->data = data;
     }
     this->tableModel->updateData();
