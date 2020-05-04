@@ -69,21 +69,21 @@ QVariant StockBoxTableModel::data(const QModelIndex &index, int role) const
         case 1:
             return QLocale(QLocale::English).toString(current_stock->data.bidsize);
         case 2:
-            return current_stock->data.bid;
+            return QString::number(current_stock->data.bid, 'f', 3);
         case 3:
-            return current_stock->data.ask;
+            return QString::number(current_stock->data.ask, 'f', 3);
         case 4:
             return QLocale(QLocale::English).toString(current_stock->data.asksize);
         case 5:
             return current_stock->data.askrate;
         case 6:
-            return current_stock->condition.ask;
+            return QString::number(current_stock->condition.ask, 'f', 3);
         case 7:
             return current_stock->condition.askrate;
         case 8:
             return QLocale(QLocale::English).toString(current_stock->condition.asksize);
         case 9:
-            return current_stock->condition.bid;
+            return QString::number(current_stock->condition.bid, 'f', 3);
         case 10:
             return current_stock->condition.bidrate;
         case 11:

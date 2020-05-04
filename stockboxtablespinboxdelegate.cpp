@@ -15,6 +15,7 @@ QWidget *StockBoxTableSpinBoxDelegate::createEditor(
         QDoubleSpinBox *editor = new QDoubleSpinBox(parent);
         editor->setDecimals(3);
         editor->setFrame(false);
+        editor->setRange(0, 2000000000);
         editor->setSingleStep(0.005);
         return editor;
     }

@@ -91,7 +91,7 @@ QVariant OrderTableModel::data(const QModelIndex &index, int role) const
         case 9:
             return result.name;
         case 10:
-            return result.price;
+            return QString::number(result.price, 'f', 3);
         case 11:
             return result.qty;
         case 12:
