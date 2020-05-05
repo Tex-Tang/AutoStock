@@ -88,7 +88,7 @@ void MainWindow::autoArrange(){
         emit log(QString::number(rect.x()) + " " + QString::number(rect.y()) + " " + QString::number(rect.width()) + " " +QString::number(rect.height()));
         int suitable = -1;
         for(int ry: desktops.keys()){
-            if(ry + 15 > rect.y() > ry - 15){
+            if(ry + 15 > rect.y() && rect.y() > ry - 15){
                desktops[ry].push_back(rect);
                suitable = ry;
                break;
