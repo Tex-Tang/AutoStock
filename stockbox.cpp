@@ -6,6 +6,7 @@ StockBox::StockBox(int id, QWidget *parent) :
     ui(new Ui::StockBox)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint);
     this->id = id;
     ddeComm = new DdeComm;
     stocksData.append(new StockBoxData);

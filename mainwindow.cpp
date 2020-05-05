@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDesktopWidget>
+#include <QRect>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -77,14 +79,35 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 void MainWindow::autoArrange(){
-    int x = 0;
-    int y = 0;
-    for(StockBox* stockBox : stockBoxes){
-        stockBox->move(x,y);
-        y += 120;
-        if(y >= 900){
-            y = 0;
-            x += 768;
+    QDesktopWidget* desktop = QApplication::desktop();
+    int total = desktop->screenCount();
+    QHash<int, QVector<QRect>> desktops;
+    for(int i = 0;i < total;i++){
+        QRect rect = desktop->screenGeometry(i);
+        desktops[rect.x()].push_back(rect);
+        qSort(desktops[rect.x()].begin(), desktops[rect.x()].end(),
+                [](const QRect & a, const QRect & b) -> bool
+        {
+            return a.x() > b.x();
+        });
+    }
+    int stockBoxesId = 0;
+    for(QVector<QRect> vc : desktops){
+        int x = vc[0].x();
+        int y = vc[0].y();
+        int sumWidth = 0;
+        for(QRect rect : vc){
+            sumWidth += rect.width();
+            for(;stockBoxesId < stockBoxes.size();stockBoxesId++){
+                StockBox* stockBox = stockBoxes[stockBoxesId];
+                stockBox->move(x,y);
+                y += 120;
+                if(y >= vc[0].height()){
+                    y = vc[0].y();
+                    x += 768;
+                }
+                if(x + 768 > sumWidth) break;
+            }
         }
     }
 }
@@ -119,6 +142,7 @@ void MainWindow::loadJson(){
     QFile file("stocks.json");
     file.open(QIODevice::ReadOnly);
     QJsonDocument doc = QJsonDocument::fromJson(file.readAll());
+    this->move(doc["x"].toInt(),doc["y"].toInt());
     QJsonArray stockBoxesArray = doc["stocks"].toArray();
     for(int i = 0;i < stockBoxesArray.size();++i){
         this->addStockBox();
@@ -139,8 +163,9 @@ void MainWindow::loadJson(){
             result.stocks.push_back(stock);
         }
         stockBoxes.back()->load(result);
+        stockBoxes.back()->changeCode();
     }
-    for(StockBox* stockbox : stockBoxes) stockbox->changeCode();
+    //for(StockBox* stockbox : stockBoxes) stockbox->changeCode();
 }
 
 void MainWindow::saveJson(){
@@ -170,6 +195,8 @@ void MainWindow::saveJson(){
     }
     QJsonObject obj;
     obj["stocks"] = stockBoxesArray;
+    obj["x"] = this->x();
+    obj["y"] = this->y();
     QJsonDocument doc(obj);
     QFile file("stocks.json");
     if(file.open(QIODevice::WriteOnly))
