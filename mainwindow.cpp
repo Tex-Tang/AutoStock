@@ -101,7 +101,7 @@ void MainWindow::autoArrange(){
         qSort(desktops[suitable].begin(), desktops[suitable].end(),
                 [](const QRect & a, const QRect & b) -> bool
         {
-            return a.x() > b.x();
+            return a.x() < b.x();
         });
     }
     int stockBoxesId = 0;
