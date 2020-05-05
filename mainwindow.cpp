@@ -85,6 +85,7 @@ void MainWindow::autoArrange(){
     QHash<int, QVector<QRect>> desktops;
     for(int i = 0;i < total;i++){
         QRect rect = desktop->screenGeometry(i);
+        emit log(QString::number(rect.x()) + " " + QString::number(rect.y()) + " " + QString::number(rect.width()) + " " +QString::number(rect.height()));
         desktops[rect.x()].push_back(rect);
         qSort(desktops[rect.x()].begin(), desktops[rect.x()].end(),
                 [](const QRect & a, const QRect & b) -> bool
