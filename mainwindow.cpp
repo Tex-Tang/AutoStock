@@ -103,7 +103,7 @@ void MainWindow::autoArrange(){
                 stockBox->move(x,y);
                 y += 120;
                 if(y >= vc[0].height()){
-                    y = vc[0].y();
+                    y = rect.y();
                     x += 768;
                 }
                 if(x + 768 > sumWidth) break;
@@ -163,9 +163,8 @@ void MainWindow::loadJson(){
             result.stocks.push_back(stock);
         }
         stockBoxes.back()->load(result);
-        stockBoxes.back()->changeCode();
     }
-    //for(StockBox* stockbox : stockBoxes) stockbox->changeCode();
+    for(StockBox* stockbox : stockBoxes) stockbox->changeCode();
 }
 
 void MainWindow::saveJson(){
