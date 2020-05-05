@@ -42,6 +42,7 @@ signals:
     void initOrderSystem();
     void initLogger();
     void changeRakutenInfo(RakutenInfo info);
+    void log(QString msg);
 
 private:
     Ui::MainWindow *ui;

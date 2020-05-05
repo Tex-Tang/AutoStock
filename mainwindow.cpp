@@ -43,6 +43,7 @@ MainWindow::MainWindow(QWidget *parent)
     logThread = new QThread;
     loggerWorker = new LoggerWorker;
     connect(this, &MainWindow::initLogger, loggerWorker, &LoggerWorker::init);
+    connect(this, &MainWindow::log, loggerWorker, &LoggerWorker::log);
     connect(dataSystemWorker, &DataSystemWorker::log, loggerWorker, &LoggerWorker::log);
     connect(orderSystemWorker, &OrderSystemWorker::log, loggerWorker, &LoggerWorker::log);
     loggerWorker->moveToThread(logThread);
