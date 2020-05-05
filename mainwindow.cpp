@@ -115,8 +115,8 @@ void MainWindow::autoArrange(){
                 StockBox* stockBox = stockBoxes[stockBoxesId];
                 stockBox->move(x,y);
                 y += 120;
-                if(y >= vc[0].height()){
-                    y = rect.y();
+                if(y >= vc[0].y() + vc[0].height()){
+                    y = vc[0].y();
                     x += 768;
                 }
                 if(x + 768 > sumWidth) break;
