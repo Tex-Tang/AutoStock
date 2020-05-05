@@ -86,13 +86,17 @@ void MainWindow::autoArrange(){
     for(int i = 0;i < total;i++){
         QRect rect = desktop->screenGeometry(i);
         emit log(QString::number(rect.x()) + " " + QString::number(rect.y()) + " " + QString::number(rect.width()) + " " +QString::number(rect.height()));
-        int suitable = 0;
-        for(int rx: desktops.keys()){
-            if(rx + 15 > rect.x() > rx - 15){
-               desktops[rx].push_back(rect);
-               suitable = rx;
+        int suitable = -1;
+        for(int ry: desktops.keys()){
+            if(ry + 15 > rect.y() > ry - 15){
+               desktops[ry].push_back(rect);
+               suitable = ry;
                break;
             }
+        }
+        if(suitable == -1){
+            desktops[rect.y()].push_back(rect);
+            suitable = rect.y();
         }
         qSort(desktops[suitable].begin(), desktops[suitable].end(),
                 [](const QRect & a, const QRect & b) -> bool
