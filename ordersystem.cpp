@@ -32,7 +32,12 @@ void OrderSystem::receiveOrder(QString action, int id, QString code, QString nam
     result.price = price;
     result.qty = qty;
     result.triggerSize = triggerSize;
-    if(this->info.valid()){
+    if(qty == 0){
+        result.status = 0;
+        result.endTime = QDateTime::currentDateTime();
+        result.response = "Order Quantity must > 0";
+        emit sendOrderResult(result);
+    }else if(this->info.valid()){
         QNetworkReply* reply = networkManager->post(networkRequest, requestData(action, name, qty, price));
         reply->setProperty("id", result.id);
         reply->setProperty("qty", result.qty);
