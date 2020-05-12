@@ -12,20 +12,22 @@ DataSystem::DataSystem(QObject *parent) : QObject(parent)
 }
 
 void DataSystem::subscribe(StockBox* stockBox, QString code){
-    if(!codeToStockData.contains(code.replace(".MD",""))){
+    QString cleanCode = code;
+    cleanCode.replace(".MD","");
+    if(!codeToStockData.contains(cleanCode)){
         StockData data;
         data.reset();
-        codeToStockData[code.replace(".MD","")] = data;
-        codeToStockBoxes[code.replace(".MD","")][stockBox] = 0;
+        codeToStockData[cleanCode] = data;
+        codeToStockBoxes[cleanCode][stockBox] = 0;
         if(!startAdvise(code)){
             emit log("Advised failed : " + code);
         }
     }
-    codeToStockBoxes[code][stockBox]++;
+    codeToStockBoxes[cleanCode][stockBox]++;
 }
 
 void DataSystem::unsubscribe(StockBox* stockBox, QString code){
-    code = code.replace(".MD", "");
+    code.replace(".MD", "");
     codeToStockBoxes[code][stockBox]--;
     if(codeToStockBoxes[code][stockBox] == 0){
         codeToStockBoxes[code].remove(stockBox);
@@ -37,19 +39,22 @@ void DataSystem::unsubscribe(StockBox* stockBox, QString code){
 }
 
 bool DataSystem::startAdvise(QString code){
+
     unsigned long long conv = code.contains("MD") ? conversationMD : conversationMY;
-    return dde->advise(conv, code.replace(".MD","") + ";ask") &&
-           dde->advise(conv, code.replace(".MD","") + ";bid") &&
-           dde->advise(conv, code.replace(".MD","") + ";asksize") &&
-           dde->advise(conv, code.replace(".MD","") + ";bidsize");
+    code.replace(".MD","");
+    return dde->advise(conv, code + ";ask") &&
+           dde->advise(conv, code + ";bid") &&
+           dde->advise(conv, code + ";asksize") &&
+           dde->advise(conv, code + ";bidsize");
 }
 
 bool DataSystem::stopAdvise(QString code){
     unsigned long long conv = code.contains("MD") ? conversationMD : conversationMY;
-    return dde->unadvise(conv, code.replace(".MD","") + ";ask") &&
-           dde->unadvise(conv, code.replace(".MD","") + ";bid") &&
-           dde->unadvise(conv, code.replace(".MD","") + ";asksize") &&
-           dde->unadvise(conv, code.replace(".MD","") + ";bidsize");
+    code.replace(".MD","");
+    return dde->unadvise(conv, code + ";ask") &&
+           dde->unadvise(conv, code + ";bid") &&
+           dde->unadvise(conv, code + ";asksize") &&
+           dde->unadvise(conv, code + ";bidsize");
 }
 
 void DataSystem::receiveData(QString code, QString item, QString value){
