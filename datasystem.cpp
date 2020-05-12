@@ -12,11 +12,11 @@ DataSystem::DataSystem(QObject *parent) : QObject(parent)
 }
 
 void DataSystem::subscribe(StockBox* stockBox, QString code){
-    if(!codeToStockData.contains(code)){
+    if(!codeToStockData.contains(code.replace(".MD",""))){
         StockData data;
         data.reset();
-        codeToStockData[code] = data;
-        codeToStockBoxes[code][stockBox] = 0;
+        codeToStockData[code.replace(".MD","")] = data;
+        codeToStockBoxes[code.replace(".MD","")][stockBox] = 0;
         if(!startAdvise(code)){
             emit log("Advised failed : " + code);
         }
@@ -25,6 +25,7 @@ void DataSystem::subscribe(StockBox* stockBox, QString code){
 }
 
 void DataSystem::unsubscribe(StockBox* stockBox, QString code){
+    code = code.replace(".MD", "");
     codeToStockBoxes[code][stockBox]--;
     if(codeToStockBoxes[code][stockBox] == 0){
         codeToStockBoxes[code].remove(stockBox);

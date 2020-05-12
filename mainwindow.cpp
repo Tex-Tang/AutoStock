@@ -119,7 +119,7 @@ void MainWindow::autoArrange(){
                     y = vc[0].y();
                     x += 768;
                 }
-                if(x + 768 > sumWidth) break;
+                if(x + 768 - vc[0].x() > sumWidth) break;
             }
         }
     }

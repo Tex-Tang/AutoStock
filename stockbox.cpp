@@ -53,7 +53,7 @@ void StockBox::changeCode(){
         QString new_code = ui->stockCodeLineEdit->text();
         StockBoxData result = request(new_code);
         if(!result.name.isEmpty()){
-            if(!stocksData[0]->code.isNull()) emit unsubscribe(this, stocksData[0]->code);
+            if(!stocksData[0]->code.isNull()) emit unsubscribe(this, new_code);
             stocksData[0]->code = new_code; // result.code has replaced "MD"
             stocksData[0]->name = result.name;
             stocksData[0]->data = result.data;
@@ -69,7 +69,7 @@ void StockBox::changeCode(){
         QString new_code = ui->warrantCodeLineEdit->text();
         StockBoxData result = request(new_code);
         if(!result.name.isEmpty()){
-            if(!stocksData[1]->code.isNull()) emit unsubscribe(this, stocksData[1]->code);
+            if(!stocksData[1]->code.isNull()) emit unsubscribe(this, new_code);
             stocksData[1]->code = new_code; // result.code has replaced "MD"
             stocksData[1]->name = result.name;
             stocksData[1]->data = result.data;
