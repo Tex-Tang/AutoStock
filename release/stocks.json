@@ -1,3 +1,1266 @@
 {
-    "stocks": [{"x":0,"y":0,"stocks":[{"code":"7113","condition":{"ask":6.75,"bid":6.75,"asksize":0,"bidsize":0,"askrate":6,"bidrate":22}},{"code":"711365","condition":{"ask":0.48,"bid":0.48,"asksize":0,"bidsize":0,"askrate":0,"bidrate":0}}]},{"x":0,"y":0,"stocks":[{"code":"7106","condition":{"ask":2.07,"bid":2.04,"asksize":61000,"bidsize":0,"askrate":6,"bidrate":1}},{"code":"710687","condition":{"ask":0.25,"bid":0.24,"asksize":10000,"bidsize":0,"askrate":0,"bidrate":22}}]},{"x":0,"y":0,"stocks":[{"code":"7106","condition":{"ask":2.06,"bid":2.06,"asksize":0,"bidsize":2,"askrate":6,"bidrate":1}},{"code":"710686","condition":{"ask":0.14,"bid":0.14,"asksize":0,"bidsize":0,"askrate":12,"bidrate":22}}]},{"x":0,"y":0,"stocks":[{"code":"0128","condition":{"ask":2.1,"bid":2.08,"asksize":0,"bidsize":0,"askrate":6,"bidrate":1}},{"code":"0128CM","condition":{"ask":0.14,"bid":0.13,"asksize":0,"bidsize":0,"askrate":0,"bidrate":22}}]},{"x":0,"y":0,"stocks":[{"code":"0128","condition":{"ask":2.1,"bid":2.08,"asksize":0,"bidsize":2,"askrate":1,"bidrate":1}},{"code":"0128CI","condition":{"ask":0.085,"bid":0.055,"asksize":0,"bidsize":0,"askrate":0,"bidrate":0}}]},{"x":0,"y":0,"stocks":[{"code":"5286","condition":{"ask":2.03,"bid":2.02,"asksize":0,"bidsize":0,"askrate":6,"bidrate":6}},{"code":"5286CJ","condition":{"ask":0.14,"bid":0.135,"asksize":0,"bidsize":0,"askrate":6,"bidrate":22}}]},{"x":0,"y":0,"stocks":[{"code":"5286","condition":{"ask":2.03,"bid":2.02,"asksize":5,"bidsize":2,"askrate":0,"bidrate":0}},{"code":"5286CH","condition":{"ask":0.185,"bid":0.18,"asksize":0,"bidsize":0,"askrate":0,"bidrate":0}}]},{"x":0,"y":0,"stocks":[{"code":"5210","condition":{"ask":1391.5,"bid":1388.5,"asksize":3,"bidsize":3,"askrate":0,"bidrate":0}},{"code":"5210","condition":{"ask":0.595,"bid":0.6,"asksize":0,"bidsize":0,"askrate":6,"bidrate":12}}]},{"x":0,"y":0,"stocks":[{"code":"5216","condition":{"ask":1.02,"bid":1.02,"asksize":121000,"bidsize":211000,"askrate":6,"bidrate":0}},{"code":"5216","condition":{"ask":1.02,"bid":1.02,"asksize":20000,"bidsize":10000,"askrate":121000,"bidrate":311000}}]},{"x":0,"y":0,"stocks":[{"code":"4456","condition":{"ask":0.165,"bid":0.165,"asksize":1511000,"bidsize":2111000,"askrate":6,"bidrate":0}},{"code":"4456","condition":{"ask":0.165,"bid":0.165,"asksize":20000,"bidsize":20000,"askrate":1511000,"bidrate":3111000}}]},{"x":0,"y":0,"stocks":[{"code":"7070","condition":{"ask":0.325,"bid":0.32,"asksize":61000,"bidsize":161000,"askrate":0,"bidrate":0}},{"code":"7070","condition":{"ask":0.325,"bid":0.32,"asksize":20000,"bidsize":0,"askrate":121000,"bidrate":261000}}]},{"x":0,"y":0,"stocks":[{"code":"0186","condition":{"ask":0.195,"bid":0.18,"asksize":221000,"bidsize":321000,"askrate":6,"bidrate":0}},{"code":"0186","condition":{"ask":0.195,"bid":0.18,"asksize":20000,"bidsize":0,"askrate":6,"bidrate":321000}}]},{"x":0,"y":0,"stocks":[{"code":"7145","condition":{"ask":0.13,"bid":0.13,"asksize":521000,"bidsize":1521000,"askrate":0,"bidrate":0}},{"code":"7145","condition":{"ask":0.13,"bid":0.13,"asksize":20000,"bidsize":20000,"askrate":521000,"bidrate":1521000}}]},{"x":0,"y":0,"stocks":[{"code":"8893","condition":{"ask":0.13,"bid":0.115,"asksize":511000,"bidsize":211000,"askrate":6,"bidrate":0}},{"code":"8893","condition":{"ask":0.13,"bid":0.115,"asksize":20000,"bidsize":0,"askrate":1211000,"bidrate":2511000}}]},{"x":0,"y":0,"stocks":[{"code":"0217","condition":{"ask":0.245,"bid":0.245,"asksize":61000,"bidsize":0,"askrate":0,"bidrate":0}},{"code":"0217","condition":{"ask":0.245,"bid":0.245,"asksize":20000,"bidsize":20000,"askrate":0,"bidrate":291000}}]},{"x":0,"y":0,"stocks":[{"code":"0202","condition":{"ask":0.275,"bid":0.275,"asksize":81000,"bidsize":521000,"askrate":0,"bidrate":8}},{"code":"0202","condition":{"ask":0.275,"bid":0.275,"asksize":20000,"bidsize":20000,"askrate":81000,"bidrate":521000}}]},{"x":0,"y":0,"stocks":[{"code":"7079","condition":{"ask":0.09,"bid":0.075,"asksize":2211000,"bidsize":3111000,"askrate":0,"bidrate":0}},{"code":"7079","condition":{"ask":0.09,"bid":0.075,"asksize":20000,"bidsize":0,"askrate":2211000,"bidrate":3111000}}]},{"x":0,"y":0,"stocks":[{"code":"7181","condition":{"ask":0.235,"bid":0.235,"asksize":121000,"bidsize":321000,"askrate":0,"bidrate":0}},{"code":"7181","condition":{"ask":0.235,"bid":0.235,"asksize":20000,"bidsize":20000,"askrate":221000,"bidrate":321000}}]},{"x":0,"y":0,"stocks":[{"code":"5182","condition":{"ask":0.2,"bid":0.185,"asksize":521000,"bidsize":521000,"askrate":6,"bidrate":0}},{"code":"5182","condition":{"ask":0.2,"bid":0.185,"asksize":20000,"bidsize":0,"askrate":521000,"bidrate":1521000}}]},{"x":0,"y":0,"stocks":[{"code":"2054","condition":{"ask":0.19,"bid":0.175,"asksize":221000,"bidsize":121000,"askrate":0,"bidrate":0}},{"code":"2054","condition":{"ask":0.19,"bid":0.175,"asksize":20000,"bidsize":0,"askrate":221000,"bidrate":481000}}]},{"x":0,"y":0,"stocks":[{"code":"5113","condition":{"ask":0.2,"bid":0.185,"asksize":211000,"bidsize":0,"askrate":0,"bidrate":0}},{"code":"5113","condition":{"ask":0.2,"bid":0.185,"asksize":20000,"bidsize":0,"askrate":0,"bidrate":251000}}]},{"x":0,"y":0,"stocks":[{"code":"4235","condition":{"ask":0.26,"bid":0.25,"asksize":151000,"bidsize":521000,"askrate":0,"bidrate":0}},{"code":"4235","condition":{"ask":0.26,"bid":0.25,"asksize":20000,"bidsize":0,"askrate":251000,"bidrate":1521000}}]},{"x":0,"y":0,"stocks":[{"code":"5210","condition":{"ask":0.175,"bid":0.16,"asksize":1131000,"bidsize":5531000,"askrate":6,"bidrate":22}},{"code":"5210","condition":{"ask":0.175,"bid":0.16,"asksize":20000,"bidsize":0,"askrate":18,"bidrate":22}}]},{"x":0,"y":0,"stocks":[{"code":"7108","condition":{"ask":0.16,"bid":0.145,"asksize":519000,"bidsize":1219000,"askrate":0,"bidrate":0}},{"code":"7108","condition":{"ask":0.16,"bid":0.145,"asksize":20000,"bidsize":0,"askrate":0,"bidrate":22}}]},{"x":0,"y":0,"stocks":[{"code":"9385","condition":{"ask":0.375,"bid":0.37,"asksize":61000,"bidsize":121000,"askrate":6,"bidrate":0}},{"code":"9385","condition":{"ask":0.375,"bid":0.37,"asksize":20000,"bidsize":17800,"askrate":16,"bidrate":22}}]},{"x":0,"y":0,"stocks":[{"code":"0176","condition":{"ask":0.53,"bid":0.53,"asksize":121000,"bidsize":121000,"askrate":8,"bidrate":0}},{"code":"0176","condition":{"ask":0.53,"bid":0.53,"asksize":0,"bidsize":20000,"askrate":521000,"bidrate":551000}}]},{"x":0,"y":0,"stocks":[{"code":"5238","condition":{"ask":0.125,"bid":0.115,"asksize":2911000,"bidsize":2111000,"askrate":6,"bidrate":22}},{"code":"5238","condition":{"ask":0.125,"bid":0.115,"asksize":20000,"bidsize":0,"askrate":2911000,"bidrate":8111000}}]},{"x":0,"y":0,"stocks":[{"code":"5657","condition":{"ask":0.125,"bid":0.11,"asksize":595000,"bidsize":591000,"askrate":6,"bidrate":12}},{"code":"5657","condition":{"ask":0.125,"bid":0.11,"asksize":20000,"bidsize":0,"askrate":0,"bidrate":1591000}}]},{"x":0,"y":0,"stocks":[{"code":"5199","condition":{"ask":0.43,"bid":0.41,"asksize":517000,"bidsize":2641000,"askrate":8,"bidrate":0}},{"code":"5199","condition":{"ask":0.43,"bid":0.41,"asksize":0,"bidsize":20000,"askrate":1217000,"bidrate":2641000}}]},{"x":0,"y":0,"stocks":[{"code":"7219","condition":{"ask":0.275,"bid":0.27,"asksize":1111000,"bidsize":1111000,"askrate":8,"bidrate":0}},{"code":"7219","condition":{"ask":0.275,"bid":0.27,"asksize":0,"bidsize":0,"askrate":2111000,"bidrate":3111000}}]},{"x":0,"y":0,"stocks":[{"code":"7471","condition":{"ask":0.175,"bid":0.16,"asksize":121000,"bidsize":321000,"askrate":8,"bidrate":1}},{"code":"7471","condition":{"ask":0.175,"bid":0.16,"asksize":20000,"bidsize":0,"askrate":0,"bidrate":22}}]},{"x":0,"y":0,"stocks":[{"code":"7164","condition":{"ask":0.14,"bid":0.135,"asksize":2511000,"bidsize":3511000,"askrate":0,"bidrate":22}},{"code":"7164","condition":{"ask":0.14,"bid":0.135,"asksize":0,"bidsize":20000,"askrate":2511000,"bidrate":1710000}}]},{"x":0,"y":0,"stocks":[{"code":"0078","condition":{"ask":0.225,"bid":0.21,"asksize":151000,"bidsize":151000,"askrate":1,"bidrate":0}},{"code":"0078","condition":{"ask":0.225,"bid":0.21,"asksize":0,"bidsize":20000,"askrate":151000,"bidrate":551000}}]},{"x":0,"y":0,"stocks":[{"code":"6807","condition":{"ask":0.195,"bid":0.19,"asksize":451000,"bidsize":0,"askrate":0,"bidrate":1}},{"code":"6807","condition":{"ask":0.195,"bid":0.19,"asksize":20000,"bidsize":0,"askrate":451000,"bidrate":521000}}]},{"x":0,"y":0,"stocks":[{"code":"0182","condition":{"ask":0.24,"bid":0.23,"asksize":121000,"bidsize":321000,"askrate":8,"bidrate":12}},{"code":"0182","condition":{"ask":0.24,"bid":0.23,"asksize":20000,"bidsize":0,"askrate":221000,"bidrate":0}}]},{"x":0,"y":0,"stocks":[{"code":"6807","condition":{"ask":0.2,"bid":0.195,"asksize":131000,"bidsize":0,"askrate":6,"bidrate":0}},{"code":"6807","condition":{"ask":0.2,"bid":0.195,"asksize":0,"bidsize":0,"askrate":531000,"bidrate":1511000}}]},{"x":0,"y":0,"stocks":[{"code":"0111","condition":{"ask":0.185,"bid":0.18,"asksize":121000,"bidsize":311000,"askrate":6,"bidrate":0}},{"code":"0111","condition":{"ask":0.185,"bid":0.18,"asksize":20000,"bidsize":0,"askrate":521000,"bidrate":1511000}}]},{"x":0,"y":0,"stocks":[{"code":"8583","condition":{"ask":0.43,"bid":0.425,"asksize":61000,"bidsize":111000,"askrate":6,"bidrate":0}},{"code":"8583","condition":{"ask":0.43,"bid":0.425,"asksize":0,"bidsize":0,"askrate":81000,"bidrate":311000}}]},{"x":0,"y":0,"stocks":[{"code":"6084","condition":{"ask":0.34,"bid":0.33,"asksize":151000,"bidsize":121000,"askrate":0,"bidrate":0}},{"code":"6084","condition":{"ask":0.34,"bid":0.33,"asksize":20000,"bidsize":0,"askrate":151000,"bidrate":321000}}]},{"x":0,"y":0,"stocks":[{"code":"0213","condition":{"ask":0.34,"bid":0.33,"asksize":51000,"bidsize":1000,"askrate":0,"bidrate":0}},{"code":"0213","condition":{"ask":0.34,"bid":0.33,"asksize":20000,"bidsize":0,"askrate":121000,"bidrate":281000}}]}]
+    "stocks": [
+        {
+            "stocks": [
+                {
+                    "code": "2127",
+                    "condition": {
+                        "ask": 4.6,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 4.48,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "2127CB",
+                    "condition": {
+                        "ask": 0.235,
+                        "askrate": 5100,
+                        "asksize": 0,
+                        "bid": 0.225,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 0
+        },
+        {
+            "stocks": [
+                {
+                    "code": "7153",
+                    "condition": {
+                        "ask": 7.67,
+                        "askrate": 0,
+                        "asksize": 51000,
+                        "bid": 7.53,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "715316",
+                    "condition": {
+                        "ask": 0.17,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.165,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 120
+        },
+        {
+            "stocks": [
+                {
+                    "code": "7106",
+                    "condition": {
+                        "ask": 10.4,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 10.22,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "71061I",
+                    "condition": {
+                        "ask": 0.175,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.17,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 240
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5168",
+                    "condition": {
+                        "ask": 17.88,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 17.56,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "516859",
+                    "condition": {
+                        "ask": 0.155,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.15,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 360
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5292",
+                    "condition": {
+                        "ask": 6.67,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 6.58,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "5292CE",
+                    "condition": {
+                        "ask": 0.205,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.2,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 480
+        },
+        {
+            "stocks": [
+                {
+                    "code": "0097",
+                    "condition": {
+                        "ask": 13.1,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 12.98,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "0097CR",
+                    "condition": {
+                        "ask": 0.23,
+                        "askrate": 21,
+                        "asksize": 0,
+                        "bid": 0.225,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 600
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5222",
+                    "condition": {
+                        "ask": 1.09,
+                        "askrate": 0,
+                        "asksize": 121000,
+                        "bid": 1.06,
+                        "bidrate": 0,
+                        "bidsize": 121000
+                    }
+                },
+                {
+                    "code": "522295",
+                    "condition": {
+                        "ask": 0.08,
+                        "askrate": 221000,
+                        "asksize": 0,
+                        "bid": 0.075,
+                        "bidrate": 1,
+                        "bidsize": 60000
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 720
+        },
+        {
+            "stocks": [
+                {
+                    "code": "8176",
+                    "condition": {
+                        "ask": 1.93,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 1.88,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "8176CB",
+                    "condition": {
+                        "ask": 0.21,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.195,
+                        "bidrate": 19,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 840
+        },
+        {
+            "stocks": [
+                {
+                    "code": "1295",
+                    "condition": {
+                        "ask": 15.84,
+                        "askrate": 20,
+                        "asksize": 3100,
+                        "bid": 15.72,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "129549",
+                    "condition": {
+                        "ask": 0.135,
+                        "askrate": 15100,
+                        "asksize": 0,
+                        "bid": 0.13,
+                        "bidrate": 19,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 0,
+            "y": 960
+        },
+        {
+            "stocks": [
+                {
+                    "code": "6947",
+                    "condition": {
+                        "ask": 4.12,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 4.05,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "694741",
+                    "condition": {
+                        "ask": 0.115,
+                        "askrate": 9,
+                        "asksize": 0,
+                        "bid": 0.105,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 768,
+            "y": 0
+        },
+        {
+            "stocks": [
+                {
+                    "code": "7155",
+                    "condition": {
+                        "ask": 1.82,
+                        "askrate": 0,
+                        "asksize": 15100,
+                        "bid": 1.78,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "7155C1",
+                    "condition": {
+                        "ask": 0.16,
+                        "askrate": 9,
+                        "asksize": 0,
+                        "bid": 0.15,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 768,
+            "y": 120
+        },
+        {
+            "stocks": [
+                {
+                    "code": "0128",
+                    "condition": {
+                        "ask": 3.69,
+                        "askrate": 10,
+                        "asksize": 0,
+                        "bid": 3.64,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "0128CR",
+                    "condition": {
+                        "ask": 0.145,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.14,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 768,
+            "y": 240
+        },
+        {
+            "stocks": [
+                {
+                    "code": "6963",
+                    "condition": {
+                        "ask": 2.4,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 2.37,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "696335",
+                    "condition": {
+                        "ask": 0.3,
+                        "askrate": 21,
+                        "asksize": 0,
+                        "bid": 0.295,
+                        "bidrate": 2,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 768,
+            "y": 360
+        },
+        {
+            "stocks": [
+                {
+                    "code": "0166",
+                    "condition": {
+                        "ask": 2.46,
+                        "askrate": 10,
+                        "asksize": 0,
+                        "bid": 2.44,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "016665",
+                    "condition": {
+                        "ask": 0.285,
+                        "askrate": 9,
+                        "asksize": 0,
+                        "bid": 0.28,
+                        "bidrate": 19,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 768,
+            "y": 480
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5102",
+                    "condition": {
+                        "ask": 3.19,
+                        "askrate": 10,
+                        "asksize": 0,
+                        "bid": 3.15,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "5102CT",
+                    "condition": {
+                        "ask": 0.2,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.195,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 768,
+            "y": 600
+        },
+        {
+            "stocks": [
+                {
+                    "code": "7160",
+                    "condition": {
+                        "ask": 5.16,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 5.09,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "7160C1",
+                    "condition": {
+                        "ask": 0.2,
+                        "askrate": 9,
+                        "asksize": 0,
+                        "bid": 0.19,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 768,
+            "y": 720
+        },
+        {
+            "stocks": [
+                {
+                    "code": "7084",
+                    "condition": {
+                        "ask": 7.2,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 6.72,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "7084CT",
+                    "condition": {
+                        "ask": 0.32,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.285,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 768,
+            "y": 840
+        },
+        {
+            "stocks": [
+                {
+                    "code": "7277",
+                    "condition": {
+                        "ask": 3.81,
+                        "askrate": 10,
+                        "asksize": 0,
+                        "bid": 3.78,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "727759",
+                    "condition": {
+                        "ask": 0.15,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.145,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 0
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5286",
+                    "condition": {
+                        "ask": 4.21,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 4.14,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "5286CQ",
+                    "condition": {
+                        "ask": 0.135,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.13,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 120
+        },
+        {
+            "stocks": [
+                {
+                    "code": "7233",
+                    "condition": {
+                        "ask": 3.53,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 3.46,
+                        "bidrate": 0,
+                        "bidsize": 3100
+                    }
+                },
+                {
+                    "code": "7233CF",
+                    "condition": {
+                        "ask": 0.14,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.135,
+                        "bidrate": 0,
+                        "bidsize": 60000
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 240
+        },
+        {
+            "stocks": [
+                {
+                    "code": "9059",
+                    "condition": {
+                        "ask": 0.975,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.955,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "9059CN",
+                    "condition": {
+                        "ask": 0.1,
+                        "askrate": 51000,
+                        "asksize": 0,
+                        "bid": 0.095,
+                        "bidrate": 2,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 360
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5398",
+                    "condition": {
+                        "ask": 3.63,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 3.55,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "539884",
+                    "condition": {
+                        "ask": 0.16,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.15,
+                        "bidrate": 2,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 480
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5216",
+                    "condition": {
+                        "ask": 0.54,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.52,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "521626",
+                    "condition": {
+                        "ask": 0.06,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.055,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 600
+        },
+        {
+            "stocks": [
+                {
+                    "code": "0138",
+                    "condition": {
+                        "ask": 1.44,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 1.4,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "01381G",
+                    "condition": {
+                        "ask": 0.195,
+                        "askrate": 121000,
+                        "asksize": 0,
+                        "bid": 0.185,
+                        "bidrate": 11,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 720
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5183",
+                    "condition": {
+                        "ask": 6.08,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 6.02,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "518352",
+                    "condition": {
+                        "ask": 0.19,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.185,
+                        "bidrate": 19,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 840
+        },
+        {
+            "stocks": [
+                {
+                    "code": "1155",
+                    "condition": {
+                        "ask": 7.28,
+                        "askrate": 10,
+                        "asksize": 0,
+                        "bid": 7.23,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "115572",
+                    "condition": {
+                        "ask": 0.135,
+                        "askrate": 39,
+                        "asksize": 0,
+                        "bid": 0.13,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 1536,
+            "y": 960
+        },
+        {
+            "stocks": [
+                {
+                    "code": "1961",
+                    "condition": {
+                        "ask": 4.48,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 4.44,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "196131",
+                    "condition": {
+                        "ask": 0.095,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.09,
+                        "bidrate": 9,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 0
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5285",
+                    "condition": {
+                        "ask": 5.01,
+                        "askrate": 50,
+                        "asksize": 0,
+                        "bid": 4.97,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "5285CU",
+                    "condition": {
+                        "ask": 0.11,
+                        "askrate": 21,
+                        "asksize": 0,
+                        "bid": 0.105,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 120
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5126",
+                    "condition": {
+                        "ask": 3.66,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 3.57,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "5126CF",
+                    "condition": {
+                        "ask": 0.125,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.115,
+                        "bidrate": 3,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 240
+        },
+        {
+            "stocks": [
+                {
+                    "code": "4863",
+                    "condition": {
+                        "ask": 4.19,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 4.14,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "486370",
+                    "condition": {
+                        "ask": 0.12,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.115,
+                        "bidrate": 3,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 360
+        },
+        {
+            "stocks": [
+                {
+                    "code": "3336",
+                    "condition": {
+                        "ask": 1.43,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 1.42,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "333644",
+                    "condition": {
+                        "ask": 0.165,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.16,
+                        "bidrate": 39,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 480
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5347",
+                    "condition": {
+                        "ask": 10.26,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 10.16,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "534778",
+                    "condition": {
+                        "ask": 0.055,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.05,
+                        "bidrate": 3,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 600
+        },
+        {
+            "stocks": [
+                {
+                    "code": "8877",
+                    "condition": {
+                        "ask": 0.5,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.49,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "887715",
+                    "condition": {
+                        "ask": 0.125,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.12,
+                        "bidrate": 3,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 720
+        },
+        {
+            "stocks": [
+                {
+                    "code": "4065",
+                    "condition": {
+                        "ask": 19.38,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 18.6,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "4065CK",
+                    "condition": {
+                        "ask": 0.185,
+                        "askrate": 9,
+                        "asksize": 0,
+                        "bid": 0.155,
+                        "bidrate": 3,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 840
+        },
+        {
+            "stocks": [
+                {
+                    "code": "8869",
+                    "condition": {
+                        "ask": 5.15,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 5.06,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "886945",
+                    "condition": {
+                        "ask": 0.105,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.095,
+                        "bidrate": 2,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 2304,
+            "y": 960
+        },
+        {
+            "stocks": [
+                {
+                    "code": "8583",
+                    "condition": {
+                        "ask": 0.715,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.71,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "858323",
+                    "condition": {
+                        "ask": 0.085,
+                        "askrate": 9,
+                        "asksize": 0,
+                        "bid": 0.08,
+                        "bidrate": 2,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 0
+        },
+        {
+            "stocks": [
+                {
+                    "code": "4197",
+                    "condition": {
+                        "ask": 2.42,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 2.39,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "419743",
+                    "condition": {
+                        "ask": 0.2,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.185,
+                        "bidrate": 2,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 120
+        },
+        {
+            "stocks": [
+                {
+                    "code": "4731",
+                    "condition": {
+                        "ask": 11.28,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 11.12,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "4731CK",
+                    "condition": {
+                        "ask": 0.14,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.13,
+                        "bidrate": 29,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 240
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5205",
+                    "condition": {
+                        "ask": 0.24,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.235,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "5205",
+                    "condition": {
+                        "ask": 0.24,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.235,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 360
+        },
+        {
+            "stocks": [
+                {
+                    "code": "0028",
+                    "condition": {
+                        "ask": 0.27,
+                        "askrate": 30,
+                        "asksize": 0,
+                        "bid": 0.255,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "0028",
+                    "condition": {
+                        "ask": 0.27,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.255,
+                        "bidrate": 21,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 480
+        },
+        {
+            "stocks": [
+                {
+                    "code": "0131",
+                    "condition": {
+                        "ask": 0.205,
+                        "askrate": 10,
+                        "asksize": 0,
+                        "bid": 0.195,
+                        "bidrate": 30,
+                        "bidsize": 2521000
+                    }
+                },
+                {
+                    "code": "0131",
+                    "condition": {
+                        "ask": 0.205,
+                        "askrate": 851000,
+                        "asksize": 0,
+                        "bid": 0.195,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 600
+        },
+        {
+            "stocks": [
+                {
+                    "code": "0132",
+                    "condition": {
+                        "ask": 0.17,
+                        "askrate": 30,
+                        "asksize": 0,
+                        "bid": 0.155,
+                        "bidrate": 30,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "0132",
+                    "condition": {
+                        "ask": 0.17,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.155,
+                        "bidrate": 1521000,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 720
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5101",
+                    "condition": {
+                        "ask": 0.28,
+                        "askrate": 10,
+                        "asksize": 0,
+                        "bid": 0.265,
+                        "bidrate": 30,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "5101",
+                    "condition": {
+                        "ask": 0.28,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.265,
+                        "bidrate": 9,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 840
+        },
+        {
+            "stocks": [
+                {
+                    "code": "5172",
+                    "condition": {
+                        "ask": 0.235,
+                        "askrate": 30,
+                        "asksize": 0,
+                        "bid": 0.22,
+                        "bidrate": 30,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "5172",
+                    "condition": {
+                        "ask": 0.235,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 0.22,
+                        "bidrate": 2621000,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 3072,
+            "y": 960
+        },
+        {
+            "stocks": [
+                {
+                    "code": "7148",
+                    "condition": {
+                        "ask": 3.71,
+                        "askrate": 0,
+                        "asksize": 0,
+                        "bid": 3.6,
+                        "bidrate": 0,
+                        "bidsize": 0
+                    }
+                },
+                {
+                    "code": "7148CI",
+                    "condition": {
+                        "ask": 0.19,
+                        "askrate": 9,
+                        "asksize": 0,
+                        "bid": 0.18,
+                        "bidrate": 1,
+                        "bidsize": 0
+                    }
+                }
+            ],
+            "x": 766,
+            "y": 958
+        }
+    ],
+    "x": 550,
+    "y": 789
 }

@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../loggerworker.h"
+#include "../../AutoStock/loggerworker.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

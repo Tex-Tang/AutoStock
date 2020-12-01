@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../datasystemworker.h"
+#include "../../AutoStock/datasystemworker.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
